@@ -1,9 +1,9 @@
+
 import React, { Fragment } from 'react'
 import dynamic from 'next/dynamic'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { MainLayout } from '@/components/layout'
 import { Grid } from '@mui/material'
-
 const Home: NextPageWithLayout = () => {
   return (
     <Fragment>
