@@ -4,6 +4,7 @@ import { NextPageWithLayout } from '@/interfaces/layout'
 import { MainLayout } from '@/components/layout'
 import { Grid } from '@mui/material'
 const DynamicHomeHero = dynamic(() => import('../screens/Hero'))
+const DynamicHomeOurConcepts = dynamic(() => import('../screens/Concept'))
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -11,6 +12,9 @@ const Home: NextPageWithLayout = () => {
       <Grid spacing={2}>
         <Grid item xs={12}>
           <DynamicHomeHero />
+        </Grid>
+        <Grid item xs={12}>
+          <DynamicHomeOurConcepts />
         </Grid>
       </Grid>
     </Fragment>
