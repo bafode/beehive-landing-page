@@ -12,21 +12,21 @@ const Footer: FC = () => {
   return (
     <Box
       component="footer"
-      sx={{ backgroundColor: 'black', py: { xs: 6, md: 10 }, color: 'black' }}
+      sx={{ py: { xs: 6, md: 10 }, color: 'black', }}
     >
       <Container>
         <Grid container spacing={1}>
           <Grid item xs={12} md={5}>
-            <Box sx={{ color: "white", width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
+            <Box sx={{ color: "black", width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
               <Image src={'/images/logo.png'} width={170} height={90} alt='logo' />
               <Box display={"flex"} justifyContent={'flex-start'} alignItems={'center'} pb={2}>
-                <EmailIcon sx={{ color: 'white' }} />
+                <EmailIcon sx={{ color: 'primary.main' }} />
                 <Typography variant="subtitle1" sx={{ letterSpacing: 1, mx: 2 }}>
                   info@beehive.com
                 </Typography>
               </Box>
               <Box display={"flex"} justifyContent={'flex-start'} alignItems={'center'} >
-                <CallIcon sx={{ color: 'white' }} />
+                <CallIcon sx={{ color: 'primary.main' }} />
                 <Typography variant="subtitle1" sx={{ letterSpacing: 1, mx: 2 }}>
                   +33 6 06 06 06 06
                 </Typography>
@@ -37,7 +37,7 @@ const Footer: FC = () => {
           <Grid item xs={12} md={7}>
             <FooterNavigation />
           </Grid>
-          <Grid item md={12} sx={{ textAlign: 'center', color: 'white', padding: '2rem' }}>
+          <Grid item md={12} sx={{ textAlign: 'center', color: 'black', padding: '2rem' }}>
             <Typography>
               Copyright &copy; Beehive 2024, tout droit réservé
             </Typography>
