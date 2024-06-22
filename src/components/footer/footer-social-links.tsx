@@ -40,7 +40,7 @@ const SocialLinkItem: FC<SocialLinkItemProps> = ({ item }) => (
     component="li"
     sx={{
       display: 'inline-block',
-      color: 'primary.contrastText',
+      color: 'primary.main',
       mr: 0.5,
     }}
   >
