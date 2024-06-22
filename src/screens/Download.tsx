@@ -8,8 +8,10 @@ import Image from 'next/image'
 
 const HomeDownload: FC = () => {
     return (
-        <Box sx={{ backgroundColor: 'white', py: { xs: 1, md: 2 } }}>
-            <Container>
+        <Box sx={{
+            backgroundColor: 'white', py: { xs: 2, md: 4 }, px: { xs: 2, md: 8 }
+        }}>
+            <Container maxWidth="xl">
                 <Card
                     color='primary.main'
                     sx={{

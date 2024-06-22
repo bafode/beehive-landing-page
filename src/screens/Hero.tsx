@@ -5,20 +5,13 @@ import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import { TypeAnimation } from 'react-type-animation'
-import { Card } from '@mui/material'
-interface Exp {
-    label: string
-    value: string
-}
-interface ExpItemProps {
-    item: Exp
-}
+import { Card, CardMedia } from '@mui/material'
 
 
 const HomeHero: FC = () => {
     return (
         <Box id="hero" sx={{ backgroundColor: 'background.paper', height: '100vh', paddingTop: '7rem', position: 'relative' }}>
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
                 <Grid justifyContent={'center'} alignItems={'center'} container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
                     <Grid item xs={12} md={12}>
                         <Box
@@ -132,14 +125,20 @@ const HomeHero: FC = () => {
                                     </Typography>
                                 </Box>
                             </Grid>
-                            <Grid columnSpacing={5} container rowSpacing={2} sx={{ flexDirection: { xs: 'column', md: 'row' } }} justifyContent={"center"} alignItems={"center"}>
+                            <Grid columnSpacing={5} container rowSpacing={1} sx={{ flexDirection: { xs: 'column', md: 'row' } }} justifyContent={"center"} alignItems={"center"}>
                                 <Grid item xs={12} md={9} container spacing={1}>
                                     <Grid item xs={12} md={6} >
                                         <Box
+                                            display={'flex'}
+                                            flexDirection={'column'}
+                                            justifyContent={'space-around'}
+                                            alignItems={'center'}
                                             sx={{
+                                                borderRadius: 3,
+                                                boxShadow: 3,
+                                                height: '100%',
                                                 textAlign: { xs: 'center', md: 'left' },
                                                 padding: '1rem',
-                                                borderRadius: 1,
                                                 bgcolor: 'primary.main',
                                                 '&:hover': {
                                                     bgcolor: 'primary.dark',
@@ -150,7 +149,7 @@ const HomeHero: FC = () => {
                                                 component="mark"
                                                 sx={{
                                                     color: 'white',
-                                                    fontSize: { xs: 12, md: 24 },
+                                                    fontSize: { xs: 14, md: 24 },
                                                     fontWeight: 'bold',
                                                     backgroundColor: 'unset',
                                                     textAlign: 'center'
@@ -158,27 +157,29 @@ const HomeHero: FC = () => {
                                             >
                                                 Beehive, Votre communauté étudiante
                                             </Typography>
-                                            <br />
                                             <Typography
                                                 component="mark"
                                                 sx={{
                                                     color: 'white',
-                                                    fontSize: { xs: 9, md: 20 },
+                                                    fontSize: { xs: 9, md: 18 },
                                                     fontWeight: 'normal',
                                                     backgroundColor: 'unset',
                                                 }}
                                             >
-                                                Connectez-vous avec des étudiants partageant les mêmes idées, partagez vos expériences et découvrez de nouvelles perspectives.
+                                                Connectes toi avec des étudiants partageant les mêmes idées que toi, partages tes expériences et découvres de nouvelles perspectives.
                                             </Typography>
                                         </Box>
                                     </Grid>
                                     <Grid item xs={12} md={6} >
                                         <Box
-                                            alignSelf={'center'}
-                                            justifySelf={'center'}
                                             padding={'1rem'}
+                                            display={'flex'}
+                                            justifyContent={'center'}
+                                            alignItems={'space-between'}
                                             sx={{
-                                                borderRadius: 1,
+                                                borderRadius: 3,
+                                                boxShadow: 3,
+                                                height: '100%',
                                                 bgcolor: '#FEBF21',
                                                 '&:hover': {
                                                     bgcolor: 'primary.dark',
@@ -196,6 +197,7 @@ const HomeHero: FC = () => {
                                             >
                                                 <Typography
                                                     component="mark"
+                                                    textAlign={'center'}
                                                     sx={{
                                                         color: 'primary.main',
                                                         fontSize: 'inherit',
@@ -214,11 +216,17 @@ const HomeHero: FC = () => {
                                             </Typography>
                                         </Box>
                                     </Grid>
-                                    <Grid item xs={12} md={3} alignSelf={'start'} justifySelf={'start'} >
+                                    <Grid item xs={12} md={2}  >
                                         <Box
+                                            display={'flex'}
+                                            flexDirection={'column'}
+                                            justifyContent={'space-around'}
+                                            alignItems={'center'}
                                             padding={'1rem'}
                                             sx={{
-                                                borderRadius: 1,
+                                                borderRadius: 3,
+                                                boxShadow: 3,
+                                                height: '100%',
                                                 bgcolor: '#FEBF21',
                                                 '&:hover': {
                                                     bgcolor: 'primary.dark',
@@ -230,63 +238,78 @@ const HomeHero: FC = () => {
                                                 sx={{
                                                     letterSpacing: 1,
                                                     lineHeight: 1.3,
+                                                    color: 'primary.main',
+                                                    fontSize: { xs: 10, md: 20 },
+                                                    fontWeight: 'bold',
+                                                    backgroundColor: 'unset',
                                                 }}
                                             >
-                                                <Typography
-                                                    component="mark"
-                                                    sx={{
-                                                        color: 'primary.main',
-                                                        fontSize: { xs: 10, md: 20 },
-                                                        fontWeight: 'bold',
-                                                        backgroundColor: 'unset',
-                                                    }}
-                                                >
-                                                    Partager vos Créations
-                                                </Typography>
-                                                <br />
-                                                <Typography
-                                                    component="mark"
-                                                    sx={{
-                                                        color: 'primary.main',
-                                                        fontSize: { xs: 10, md: 20 },
-                                                        fontWeight: 'normal',
-                                                        backgroundColor: 'unset',
-                                                    }}
-                                                >
-                                                    Beehive est votre tribune pour montrer votre talent.
-                                                </Typography>
+
+                                                Partages tes Créations
+
+                                            </Typography>
+                                            <Typography
+                                                component="mark"
+                                                sx={{
+                                                    color: 'primary.main',
+                                                    fontSize: { xs: 10, md: 20 },
+                                                    fontWeight: 'normal',
+                                                    backgroundColor: 'unset',
+                                                }}
+                                            >
+                                                Beehive est une tribune pour montrer ton talent.
                                             </Typography>
                                         </Box>
                                     </Grid>
-                                    <Grid item xs={12} md={9} >
-                                        <Card
-                                            variant='outlined'
-                                            sx={{
-                                                textAlign: { xs: 'center', md: 'left' },
-                                                borderColor: 'primary.main',
-                                            }}
-                                        >
+                                    <Grid item xs={12} md={10} >
+                                        <Box display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{
+                                            height: '100%',
+                                            width: '100%',
+                                        }}>
+                                            <Card
+                                                variant='outlined'
+                                                sx={{
+                                                    borderRadius: 3,
+                                                    boxShadow: 3,
+                                                    height: '100%',
+                                                    width: '100%',
+                                                    display: 'flex',
+                                                    textAlign: { xs: 'center', md: 'left' },
+                                                    borderColor: 'primary.main',
+                                                }}
+                                            >
 
-                                            <Image src="/images/logo.png" width={500} height={200} alt="logo" />
-                                        </Card>
+                                                <Image src="/images/logo.png" width={500} height={200} alt="logo" />
+                                            </Card>
+                                        </Box>
                                     </Grid>
                                 </Grid>
                                 <Grid item xs={12} md={3}>
-                                    <Box display={'flex'} justifyContent={'center'} sx={{ lineHeight: 0, backgroundColor: 'primary.main', display: { xs: 'none', sm: 'none', md: 'inline-block' }, }} py={'1rem'} >
-                                        <Card sx={{ backgroundColor: 'primary.main' }}>
-                                            <video
-                                                autoPlay
-                                                loop
-                                                muted
-                                                poster="/images/beehive.png"
-                                                height={438}
-                                                width={220}
-                                            >
-                                                <source
-                                                    src="/videos/beehave1.mp4"
-                                                    type="video/mp4"
-                                                />
-                                            </video>
+                                    <Box display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{
+                                        borderRadius: 3,
+                                        boxShadow: 3,
+                                        width: '100%',
+                                        height: '100%',
+                                        lineHeight: 0,
+                                        backgroundColor: 'primary.main',
+                                        padding: '2rem'
+                                    }} >
+                                        <Card sx={{ backgroundColor: 'primary.main' }} >
+                                            <CardMedia>
+                                                <video
+                                                    autoPlay
+                                                    loop
+                                                    muted
+                                                    poster="/images/beehive.png"
+                                                    height={400}
+                                                    width={220}
+                                                >
+                                                    <source
+                                                        src="/videos/beehave1.mp4"
+                                                        type="video/mp4"
+                                                    />
+                                                </video>
+                                            </CardMedia>
                                         </Card>
                                     </Box>
                                 </Grid>

@@ -1,11 +1,12 @@
-import { Box, Button, Card, Container, Divider, Grid, List, ListItem, Stack, Typography, } from "@mui/material";
+import { Check, CheckCircle, CheckCircleOutline } from "@mui/icons-material";
+import { Box, Button, Card, CardActions, CardContent, Container, Divider, Grid, List, ListItem, Stack, Typography, } from "@mui/material";
 import React, { FC, } from "react";
 
 const Pricing: FC = () => {
 
     return (
         <Box id='nos-offres' sx={{ backgroundColor: 'background.paper', py: { xs: 2, md: 4 } }}>
-            <Container>
+            <Container maxWidth='xl'>
                 <Box
                     sx={{
                         backgroundColor: 'background.paper',
@@ -18,266 +19,209 @@ const Pricing: FC = () => {
                         Découvre nos offres
                     </Typography>
                     <Grid container spacing={4}>
-                        <Grid item xs={12} sm={6} md={4} lg={4}>
+                        <Grid item xs={12} sm={6} md={6} lg={6}>
                             <Card
                                 variant="outlined"
                                 sx={{
-                                    p: 3,
-                                    bgcolor: "white"
+                                    bgcolor: "white",
+                                    borderRadius: 3,
+                                    boxShadow: 3,
+                                    height: '100%',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'space-between'
                                 }}
                             >
-                                <Stack direction="column" spacing={2}>
-                                    <Stack
-                                        direction="column"
-                                        alignItems="center"
-                                        className="break-words"
-                                        spacing={1}
-                                    >
-                                        <Typography variant="h3" color={'primary.main'} sx={{ fontSize: "1.5rem" }}>
-                                            STARTER PLAN
-                                        </Typography>
-                                    </Stack>
+                                <CardContent>
+                                    <Typography color={'primary.main'} variant="h2" component="div" align="center" gutterBottom>
+                                        GRATUIT
+                                    </Typography>
                                     <Divider sx={{ width: 1 }} />
-                                    <List>
+                                    <Box>
 
-                                        <ListItem
+
+                                        <Box
                                             key={1}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            my={1}
                                         >
+                                            <Check color="success" />
+                                            <Typography sx={{ paddingLeft: '1rem' }}>Chat en duo en groupe de 3</Typography>
+                                        </Box>
+                                        <Box
+                                            key={1}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            mb={1}
+                                        >
+                                            <Check color="success" />
+                                            <Typography textAlign={'start'} sx={{ paddingLeft: '1rem' }}>Accès aux Posts Inspiration et Communauté</Typography>
+                                        </Box>
+                                        <Box
+                                            key={1}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            mb={1}
+                                        >
+                                            <Check color="success" />
+                                            <Typography sx={{ paddingLeft: '1rem' }}>Création de Posts</Typography>
+                                        </Box>
+                                        <Box
+                                            key={1}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            mb={1}
+                                        >
+                                            <Check color="success" />
+                                            <Typography sx={{ paddingLeft: '1rem' }}>Epingler jusqu'a 50 posts</Typography>
+                                        </Box>
+                                        <Box
+                                            key={1}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            mb={1}
+                                        >
+                                            <Check color="success" />
+                                            <Typography sx={{ paddingLeft: '1rem' }}>Visibilité Standard</Typography>
+                                        </Box>
 
-                                            <Typography variant="body2">live chat</Typography>
-                                        </ListItem>
-                                        <ListItem
-                                            key={2}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            <Typography variant="body2">5gb hosting</Typography>
-                                        </ListItem>
-                                        <ListItem
-                                            key={2}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            <Typography variant="body2">2 website 3 sub</Typography>
-                                        </ListItem>
-                                        <ListItem
-                                            key={2}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            <Typography variant="body2">email live chat</Typography>
-                                        </ListItem>
-                                    </List>
+                                    </Box>
                                     <Typography
-                                        variant="h4"
                                         color={'primary.main'}
+                                        variant="h4"
                                         sx={{ fontSize: "2rem", fontWeight: "bold" }}
                                     >
-                                        4.99€/MOIS
+                                        0€/MOIS
                                     </Typography>
-                                    <Button
-                                        variant="contained"
-                                        sx={{
-                                            border: "none",
-                                            textTransform: "capitalize",
-                                            background: 'primary.main'
-                                        }}
+                                </CardContent>
+                                <CardActions>
+                                    <Button fullWidth size="small" variant="outlined" color="inherit"
                                     >
-                                        <Typography color={'white'}>Télécharger Beehive</Typography>
+                                        Télecharger Beehive
                                     </Button>
-                                </Stack>
+                                </CardActions>
                             </Card>
                         </Grid>
-                        <Grid item xs={12} sm={6} md={4} lg={4}>
+                        <Grid item xs={12} sm={6} md={6} lg={6} >
                             <Card
                                 variant="elevation"
                                 sx={{
-                                    p: 3,
+                                    borderRadius: 3,
+                                    boxShadow: 3,
+                                    height: '100%',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'space-between',
                                     bgcolor: "primary.main"
                                 }}
                             >
-                                <Stack direction="column" spacing={2}>
-                                    <Stack
-                                        direction="column"
-                                        alignItems="center"
-                                        className="break-words"
-                                        spacing={1}
-                                    >
-                                        <Typography variant="h3" color={'white'} sx={{ fontSize: "1.5rem" }}>
-                                            STARTER PLAN
-                                        </Typography>
-                                    </Stack>
+                                <CardContent>
+                                    <Typography variant="h3" color={'secondary.main'} sx={{ fontSize: "1.5rem" }}>
+                                        PREMIUM
+                                    </Typography>
                                     <Divider sx={{ width: 1, backgroundColor: 'white' }} />
-                                    <List sx={{ color: 'white' }}>
-
-                                        <ListItem
+                                    <Box>
+                                        <Box
                                             key={1}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            my={1}
                                         >
+                                            <Check sx={{ color: 'secondary.main' }} />
+                                            <Typography textAlign={'start'} sx={{ paddingLeft: '1rem', color: "white" }}>Chat en groupe jusqu'à 10 personnes</Typography>
+                                        </Box>
+                                        <Box
+                                            key={2}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            my={1}
+                                        >
+                                            <Check sx={{ color: 'secondary.main' }} />
+                                            <Typography textAlign={'start'} sx={{ paddingLeft: '1rem', color: "white" }}>Accès Prioritaire aux Nouveautés</Typography>
+                                        </Box>
+                                        <Box
+                                            key={3}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            my={1}
+                                        >
+                                            <Check sx={{ color: 'secondary.main' }} />
+                                            <Typography textAlign={'start'} sx={{ paddingLeft: '1rem', color: "white" }}>Analytics Personnalisés</Typography>
+                                        </Box>
+                                        <Box
+                                            key={2}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            my={1}
+                                        >
+                                            <Check sx={{ color: 'secondary.main' }} />
+                                            <Typography textAlign={'start'} sx={{ paddingLeft: '1rem', color: "white" }}>Epingler des Posts en Ilimités</Typography>
+                                        </Box>
+                                        <Box
+                                            key={2}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            my={1}
+                                        >
+                                            <Check sx={{ color: 'secondary.main' }} />
+                                            <Typography textAlign={'start'} sx={{ paddingLeft: '1rem', color: "white" }}>Badges et Récompenses</Typography>
+                                        </Box>
+                                        <Box
+                                            key={2}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            my={1}
+                                        >
+                                            <Check sx={{ color: 'secondary.main' }} />
+                                            <Typography textAlign={'start'} sx={{ paddingLeft: '1rem', color: "white" }}>Support Prioritaire</Typography>
+                                        </Box>
+                                        <Box
+                                            key={2}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            my={1}
+                                        >
+                                            <Check sx={{ color: 'secondary.main' }} />
+                                            <Typography textAlign={'start'} sx={{ paddingLeft: '1rem', color: "white" }}>Options de Personnalisation Avancés</Typography>
+                                        </Box>
+                                        <Box
+                                            key={2}
+                                            display="flex"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            my={1}
+                                        >
+                                            <Check sx={{ color: 'secondary.main' }} />
+                                            <Typography textAlign={'start'} sx={{ paddingLeft: '1rem', color: "white" }}>Visibilité Prioritaire</Typography>
+                                        </Box>
 
-                                            <Typography variant="body2">live chat</Typography>
-                                        </ListItem>
-                                        <ListItem
-                                            key={2}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            <Typography variant="body2">5gb hosting</Typography>
-                                        </ListItem>
-                                        <ListItem
-                                            key={2}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            <Typography variant="body2">2 website 3 sub</Typography>
-                                        </ListItem>
-                                        <ListItem
-                                            key={2}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            <Typography variant="body2">email live chat</Typography>
-                                        </ListItem>
-                                    </List>
+                                    </Box>
                                     <Typography
                                         variant="h4"
-                                        color={'white'}
-                                        sx={{ fontSize: "2rem", fontWeight: "bold" }}
+                                        sx={{ fontSize: "2rem", color: 'secondary.main', fontWeight: "bold" }}
                                     >
-                                        4.99€/MOIS
+                                        10€/MOIS
                                     </Typography>
-                                    <Button
-                                        variant="outlined"
-                                        sx={{
-                                            borderColor: "white"
-                                        }}
+                                </CardContent>
+                                <CardActions>
+                                    <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: "white", ":hover": { backgroundColor: "secondary.main", color: 'white' } }}
                                     >
-                                        <Typography color={'white'}>Télécharger Beehive</Typography>
+                                        <Typography fontSize={'10px'}>commencer mon essai gratituit pendant 1 mois</Typography>
                                     </Button>
-                                </Stack>
-                            </Card>
-                        </Grid>
-                        <Grid item xs={12} sm={6} md={4} lg={4}>
-                            <Card
-                                variant="outlined"
-                                sx={{
-                                    p: 3,
-                                    bgcolor: "white"
-                                }}
-                            >
-                                <Stack direction="column" spacing={2}>
-                                    <Stack
-                                        direction="column"
-                                        alignItems="center"
-                                        className="break-words"
-                                        spacing={1}
-                                    >
-                                        <Typography variant="h3" color={'primary.main'} sx={{ fontSize: "1.5rem" }}>
-                                            STARTER PLAN
-                                        </Typography>
-                                    </Stack>
-                                    <Divider sx={{ width: 1 }} />
-                                    <List>
-
-                                        <ListItem
-                                            key={1}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-
-                                            <Typography variant="body2">live chat</Typography>
-                                        </ListItem>
-                                        <ListItem
-                                            key={2}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            <Typography variant="body2">5gb hosting</Typography>
-                                        </ListItem>
-                                        <ListItem
-                                            key={2}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            <Typography variant="body2">2 website 3 sub</Typography>
-                                        </ListItem>
-                                        <ListItem
-                                            key={2}
-                                            sx={{
-                                                px: 0,
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            <Typography variant="body2">email live chat</Typography>
-                                        </ListItem>
-                                    </List>
-                                    <Typography
-                                        variant="h4"
-                                        color={'primary.main'}
-                                        sx={{ fontSize: "2rem", fontWeight: "bold" }}
-                                    >
-                                        4.99€/MOIS
-                                    </Typography>
-                                    <Button
-                                        variant="contained"
-                                        sx={{
-                                            border: "none",
-                                            textTransform: "capitalize",
-                                            background: 'primary.main'
-                                        }}
-                                    >
-                                        <Typography color={'white'}>Télécharger Beehive</Typography>
-                                    </Button>
-                                </Stack>
+                                </CardActions>
                             </Card>
                         </Grid>
                     </Grid>

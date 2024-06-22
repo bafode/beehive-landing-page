@@ -16,7 +16,7 @@ const Footer: FC = () => {
     >
       <Container>
         <Grid container spacing={1}>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={3}>
             <Box sx={{ color: "black", width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
               <Image src={'/images/logo.png'} width={170} height={90} alt='logo' />
               <Box display={"flex"} justifyContent={'flex-start'} alignItems={'center'} pb={2}>
@@ -34,7 +34,7 @@ const Footer: FC = () => {
               <FooterSocialLinks />
             </Box>
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={9}>
             <FooterNavigation />
           </Grid>
           <Grid item md={12} sx={{ textAlign: 'center', color: 'black', padding: '2rem' }}>
