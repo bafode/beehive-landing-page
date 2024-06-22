@@ -10,9 +10,8 @@ import ContactInput from '@/components/ContactInput';
 
 const HomeNewsLetter: FC = () => {
     return (
-        <Box id='contact' sx={{ backgroundColor: 'background.paper', py: { xs: 2, md: 4 } }}>
-            <Container>
-
+        <Box id='contact' sx={{ backgroundColor: 'background.paper', py: { xs: 2, md: 4 }, px: { xs: 2, md: 8 } }}>
+            <Container maxWidth='xl'>
                 <Box
                     sx={{
                         backgroundColor: '#F3F2FF',
@@ -38,8 +37,7 @@ const HomeNewsLetter: FC = () => {
                                         Inscris-toi dès maintenant avec ton adresse mail pour recevoir une notification dès le lancement de BeeHive.
                                     </Typography>
                                     <Typography sx={{ mb: 1, fontSize: { xs: 18, md: 26 } }}>
-                                        Beehive est une Plateforme dédiée aux étudiants Espace dynamique pour l&apos;échange et la communication Partager leurs réalisations artistiques, académiques et professionnelles Faciliter les discussions et les interactions dans leurs domaines d&apos;études respectifs.
-                                        Ne manque pas lopportunité de faire partie de notre communauté étudiante dès le premier jour !.
+                                        Ne manque pas l'opportunité de faire partie de notre communauté étudiante dès le premier jour!
                                     </Typography>
                                 </Box>
                             </Grid>

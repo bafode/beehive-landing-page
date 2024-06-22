@@ -1,30 +1,56 @@
-import { Grid, InputBase } from "@mui/material";
-import React, { FC } from "react";
-import { StyledButton } from "./styled-button";
+import { Stack, InputBase, Button, Box } from "@mui/material";
+import React, { FC, useState } from "react";
 
 const ContactInput: FC = () => {
+    const [email, setEmail] = useState('');
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value);
+    };
+
+    const handleSubmit = () => {
+        console.log(email);
+    };
+
     return (
-        <Grid container spacing={0} item md={12}>
-            <Grid item xs={12} md={11}>
+        <Stack
+            direction={{ xs: 'column', md: 'row' }}
+            spacing={0} // No space between elements
+            alignItems="center"
+            sx={{ width: '100%' }}
+        >
+            <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
                 <InputBase
                     sx={{
                         backgroundColor: 'background.paper',
-                        borderRadius: 3,
-                        width: { xs: '100%', md: '70%' },
+                        border: '1px solid', // Added border
+                        borderColor: 'primary.main', // Border color
+                        borderRadius: { xs: '4px', md: '4px 0 0 4px' }, // Rounded corners for the left side
+                        width: '100%',
                         height: 48,
-                        ps: 0,
+                        pl: 1, // Padding left
                         mb: { xs: 2, md: 0 },
                     }}
-                    placeholder="Enter your Email Address"
+                    placeholder="Adresse mail"
+                    value={email}
+                    onChange={handleInputChange}
                 />
-            </Grid>
-            <Grid item xs={12} md={1}>
-                <StyledButton disableHoverEffect size="large" >
+            </Box>
+            <Box>
+                <Button
+                    variant="contained"
+                    size="large"
+                    sx={{
+                        borderRadius: { xs: '4px', md: '0 4px 4px 0' }, // Rounded corners for the right side
+                        height: 48
+                    }}
+                    onClick={handleSubmit} // Changed to onClick to handle button click
+                >
                     Subscribe
-                </StyledButton>
-            </Grid>
-        </Grid>
-    )
+                </Button>
+            </Box>
+        </Stack>
+    );
 };
 
 export default ContactInput;

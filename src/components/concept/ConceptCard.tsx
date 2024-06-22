@@ -8,14 +8,17 @@ interface Props {
 }
 
 const style = {
-    py: 0,
+    py: 1,
     width: '100%',
     maxWidth: 360,
     borderRadius: 3,
     border: '1px solid',
     borderColor: 'primary.main',
     minHeight: 'auto',
-    backgroundColor: "#F3F2FF"
+    backgroundColor: "#F3F2FF",
+    boxShadow: 3,
+    height: '100%',
+    display: 'flex',
 };
 
 const ConceptCard: FC<Props> = ({ item }) => {
@@ -23,11 +26,11 @@ const ConceptCard: FC<Props> = ({ item }) => {
         <Card sx={style}>
 
             <CardContent>
-                <Typography textAlign={"center"} gutterBottom variant="h5" component="div" fontSize={"1.2rem"}>
+                <Typography textAlign={"center"} gutterBottom variant="h2" fontSize={"1.2rem"} sx={{ fontWeight: "bold" }}>
                     {item.title}
                 </Typography>
                 <Divider />
-                <Typography variant="body2" color="text.secondary" fontSize={"1.2rem"}>
+                <Typography marginTop={"1rem"} variant="body2" color="black" fontSize={"1.2rem"} textAlign={'start'}>
                     {item.description}
                 </Typography>
             </CardContent>

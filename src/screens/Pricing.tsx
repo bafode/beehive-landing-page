@@ -6,7 +6,7 @@ const Pricing: FC = () => {
 
     return (
         <Box id='nos-offres' sx={{ backgroundColor: 'background.paper', py: { xs: 2, md: 4 } }}>
-            <Container>
+            <Container maxWidth='xl'>
                 <Box
                     sx={{
                         backgroundColor: 'background.paper',
@@ -213,11 +213,11 @@ const Pricing: FC = () => {
                                         variant="h4"
                                         sx={{ fontSize: "2rem", color: 'secondary.main', fontWeight: "bold" }}
                                     >
-                                        4.99€/MOIS
+                                        10€/MOIS
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: "white" }}
+                                    <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: "white", ":hover": { backgroundColor: "secondary.main", color: 'white' } }}
                                     >
                                         <Typography fontSize={'10px'}>commencer mon essai gratituit pendant 1 mois</Typography>
                                     </Button>
