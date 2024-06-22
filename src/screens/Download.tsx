@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 const HomeDownload: FC = () => {
     return (
-        <Box sx={{
+        <Box id="telecharger" sx={{
             backgroundColor: 'white', py: { xs: 2, md: 4 }, px: { xs: 2, md: 8 }
         }}>
             <Container maxWidth="xl">

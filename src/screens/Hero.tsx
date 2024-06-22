@@ -44,7 +44,7 @@ const HomeHero: FC = () => {
                                             backgroundColor: 'unset',
                                         }}
                                     >
-                                        Bienvenue{' '}
+                                        Bienvenue sur Beehive
                                         <Box
                                             sx={{
                                                 position: 'absolute',
@@ -58,7 +58,6 @@ const HomeHero: FC = () => {
                                             <img src="/images/headline-curve.svg" alt="Headline curve" />
                                         </Box>
                                     </Typography>
-                                    su
                                     <Typography
                                         component="span"
                                         sx={{
@@ -75,7 +74,6 @@ const HomeHero: FC = () => {
                                             },
                                         }}
                                     >
-                                        {/* Skill */}
                                         <svg version="1.1" viewBox="0 0 3183 3072">
                                             <g id="Layer_x0020_1">
                                                 <path
@@ -92,8 +90,7 @@ const HomeHero: FC = () => {
                                                 />
                                             </g>
                                         </svg>
-                                    </Typography>r{' '}
-                                    Beehive
+                                    </Typography>
                                 </Typography>
                             </Box>
                             <Grid item xs={12} >

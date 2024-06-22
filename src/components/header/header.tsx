@@ -12,7 +12,7 @@ import { useTheme } from '@mui/material/styles';
 import { Menu as MenuIcon, Close } from '@mui/icons-material';
 import Image from 'next/image';
 import Tooltip from '@mui/material/Tooltip';
-import { Navigation } from '@/components/navigation';
+import { AuthNavigation, Navigation } from '@/components/navigation';
 
 
 const settings = ['Français', 'Anglais'];
@@ -67,7 +67,7 @@ const Header: FC = () => {
           >
             <Box /> {/* Magic space */}
             <Navigation />
-            <Box>{""}</Box>
+            <AuthNavigation />
             {visibleMenu && matchMobileView && (
               <IconButton
                 sx={{
@@ -82,7 +82,7 @@ const Header: FC = () => {
             )}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="langues">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <LanguageIcon sx={{ color: "secondary.main" }} fontSize='medium' />
@@ -110,7 +110,7 @@ const Header: FC = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Box>
       </Container>
     </AppBar>

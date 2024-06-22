@@ -13,13 +13,14 @@ const ContactInput: FC = () => {
     };
 
     return (
-        <Stack
-            direction={{ xs: 'column', md: 'row' }}
-            spacing={0} // No space between elements
-            alignItems="center"
-            sx={{ width: '100%' }}
-        >
-            <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <Stack
+                direction={{ xs: 'column', md: 'row' }}
+                spacing={{ xs: 2, md: 0 }} // Space between elements on small screens
+                alignItems="center"
+                justifyContent={'center'}
+                sx={{ width: '100%', maxWidth: 800 }} // Limiting the max width for better centering
+            >
                 <InputBase
                     sx={{
                         backgroundColor: 'background.paper',
@@ -29,27 +30,26 @@ const ContactInput: FC = () => {
                         width: '100%',
                         height: 48,
                         pl: 1, // Padding left
-                        mb: { xs: 2, md: 0 },
+                        mb: { xs: 1, md: 0 },
                     }}
                     placeholder="Adresse mail"
                     value={email}
                     onChange={handleInputChange}
                 />
-            </Box>
-            <Box>
                 <Button
                     variant="contained"
                     size="large"
                     sx={{
                         borderRadius: { xs: '4px', md: '0 4px 4px 0' }, // Rounded corners for the right side
-                        height: 48
+                        height: 48,
+                        width: { xs: '100%', md: 'auto' } // Full width on small screens, auto on larger screens
                     }}
                     onClick={handleSubmit} // Changed to onClick to handle button click
                 >
-                    Subscribe
+                    Inscription
                 </Button>
-            </Box>
-        </Stack>
+            </Stack>
+        </Box>
     );
 };
 

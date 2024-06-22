@@ -35,7 +35,7 @@ const Navigation: FC = () => {
             '&.current>div': { display: 'block' },
 
             '&:hover': {
-              color: 'white',
+              color: 'primary.main',
               '&>div': {
                 display: 'block',
               },
