@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { StyledButton } from '../components/styled-button';
 import { Grid } from '@mui/material';
 import Image from 'next/image';
+import ContactInput from '@/components/ContactInput';
 
 const HomeNewsLetter: FC = () => {
     return (
@@ -43,26 +44,7 @@ const HomeNewsLetter: FC = () => {
                                 </Box>
                             </Grid>
                         </Grid>
-                        <Grid container spacing={1} item md={12}>
-                            <Grid item xs={12} md={11}>
-                                <InputBase
-                                    sx={{
-                                        backgroundColor: 'background.paper',
-                                        borderRadius: 3,
-                                        width: { xs: '100%', md: '70%' },
-                                        height: 48,
-                                        px: 2,
-                                        mb: { xs: 2, md: 0 },
-                                    }}
-                                    placeholder="Enter your Email Address"
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={1}>
-                                <StyledButton disableHoverEffect size="large" >
-                                    Subscribe
-                                </StyledButton>
-                            </Grid>
-                        </Grid>
+                        <ContactInput />
                     </Grid>
                 </Box>
             </Container>
