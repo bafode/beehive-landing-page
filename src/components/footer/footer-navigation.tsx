@@ -52,13 +52,13 @@ const FooterNavigation: FC = () => {
           <NavigationItem key={index + path} label={label} path={path} />
         ))}
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={3}>
         <FooterSectionTitle title="Utiliser Beehive" />
         {platformMenu.map(({ label, path }, index) => (
           <NavigationItem key={index + path} label={label} path={path} />
         ))}
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={5}>
         <FooterSectionTitle title="Preinscription" />
         <ContactInput />
       </Grid>
