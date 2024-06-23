@@ -17,8 +17,8 @@ const HomeDownload: FC = () => {
                     sx={{
                         backgroundColor: 'primary.main',
                         borderRadius: 10,
-                        // py: { xs: 2, md: 4 },
-                        // px: { xs: 4, md: 8 },
+                        py: { xs: 2, md: 4 },
+                        px: { xs: 4, md: 8 },
                         textAlign: 'center'
                     }}
                 >
