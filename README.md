@@ -1,18 +1,18 @@
 <h1 align="center">
-  <a href="https://github.com/bafode/coursespace-landing-page">
+  <a href="https://github.com/bafode/beehive-landing-page">
   Beehive Space - Beehive Landing Page
   </a>
   <br />
 </h1>
 
-![screenshot](public/images/beehive_capture1.png)
+![screenshot](public/images/beehive-capture5.png)
 
-**Beehive**  landing page is built on top of Material UI and fully coded in **React**.
+**Beehive** landing page is built on top of Material UI and fully coded in **React**.
 Simple & light is designed to provide all the basic components using the `sx` prop for a developer need to create landing page for Online Course product.
 
 ## Live Demo
 
-Take a look the live demo here 👉 [https://beehave.vercel.app/](https://beehave.vercel.app/)
+Take a look the live demo here 👉 [https://beehive-landing-page.vercel.app/]https://beehive-landing-page.vercel.app/)
 
 ## Getting Started
 
