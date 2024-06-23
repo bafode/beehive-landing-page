@@ -3,41 +3,36 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import LanguageIcon from '@mui/icons-material/Language';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { Menu as MenuIcon, Close } from '@mui/icons-material';
 import Image from 'next/image';
-import Tooltip from '@mui/material/Tooltip';
 import { AuthNavigation, Navigation } from '@/components/navigation';
 
 
-const settings = ['Français', 'Anglais'];
+// const settings = ['Français', 'Anglais'];
 
 const Header: FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [_, setAnchorElNav] = useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+  // const [_, setAnchorElNav] = useState<null | HTMLElement>(null);
+  // const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false);
   const { breakpoints } = useTheme();
   const matchMobileView = useMediaQuery(breakpoints.down('md'));
 
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
 
   return (
-    <AppBar position='fixed' sx={{ background: 'transparent' }}>
+    <AppBar position='static' sx={{ background: 'white' }}>
       <Container maxWidth="xl">
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Image src="/images/logo.png" width={150} height={100} alt="logo" />

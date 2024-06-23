@@ -11,13 +11,12 @@ import { conceptData } from '@/data/concepts.data'
 const HomeOurConcept: FC = () => {
 
     return (
-        <Box id='concepts' sx={{ backgroundColor: 'background.paper', py: { xs: 2, md: 4 }, px: { xs: 2, md: 4 } }}>
+        <Box id='concepts' sx={{ backgroundColor: 'background.paper', paddingTop: { xs: 70, md: 4 }, px: { xs: 2, md: 4 } }}>
             <Container maxWidth='xl' >
                 <Box
                     sx={{
                         backgroundColor: 'background.paper',
                         borderRadius: 10,
-                        py: { xs: 16, md: 28, lg: 16 },
                         px: { xs: 4, md: 8 },
                         textAlign: 'center'
                     }}>

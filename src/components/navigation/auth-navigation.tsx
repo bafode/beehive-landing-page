@@ -12,7 +12,7 @@ const AuthNavigation: FC = () => {
         </StyledButton>
       </ScrollLink>
       <ScrollLink to="contact" smooth={true} duration={500}>
-        <StyledButton disableHoverEffect={true}>S'inscrire</StyledButton>
+        <StyledButton disableHoverEffect={true}>S&apos;inscrire</StyledButton>
       </ScrollLink>
     </Box>
   )

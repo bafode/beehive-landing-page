@@ -10,7 +10,7 @@ import { Card, CardMedia } from '@mui/material'
 
 const HomeHero: FC = () => {
     return (
-        <Box id="hero" sx={{ backgroundColor: 'background.paper', height: '100vh', paddingTop: '7rem', position: 'relative' }}>
+        <Box id="hero" sx={{ backgroundColor: 'background.paper', height: '100vh', position: 'static' }}>
             <Container maxWidth="xl">
                 <Grid justifyContent={'center'} alignItems={'center'} container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
                     <Grid item xs={12} md={12}>
@@ -26,71 +26,17 @@ const HomeHero: FC = () => {
                             <Box sx={{ mb: 3 }}>
                                 <Typography
                                     component="h2"
+                                    textAlign={'center'}
                                     sx={{
-                                        position: 'relative',
                                         fontSize: { xs: 40, md: 72 },
                                         letterSpacing: 1.5,
                                         fontWeight: 'bold',
                                         lineHeight: 1.3,
+                                        color: 'primary.main',
+                                        backgroundColor: 'unset',
                                     }}
                                 >
-                                    <Typography
-                                        component="mark"
-                                        sx={{
-                                            position: 'relative',
-                                            color: 'primary.main',
-                                            fontSize: 'inherit',
-                                            fontWeight: 'inherit',
-                                            backgroundColor: 'unset',
-                                        }}
-                                    >
-                                        Bienvenue sur Beehive
-                                        <Box
-                                            sx={{
-                                                position: 'absolute',
-                                                top: { xs: 24, md: 34 },
-                                                left: 2,
-                                                transform: 'rotate(3deg)',
-                                                '& img': { width: { xs: 146, md: 210 }, height: 'auto' },
-                                            }}
-                                        >
-                                            {/* eslint-disable-next-line */}
-                                            <img src="/images/headline-curve.svg" alt="Headline curve" />
-                                        </Box>
-                                    </Typography>
-                                    <Typography
-                                        component="span"
-                                        sx={{
-                                            fontSize: 'inherit',
-                                            fontWeight: 'inherit',
-                                            color: 'primary.main',
-                                            position: 'relative',
-                                            '& svg': {
-                                                position: 'absolute',
-                                                top: -16,
-                                                right: -21,
-                                                width: { xs: 22, md: 30 },
-                                                height: 'auto',
-                                            },
-                                        }}
-                                    >
-                                        <svg version="1.1" viewBox="0 0 3183 3072">
-                                            <g id="Layer_x0020_1">
-                                                <path
-                                                    fill="#EDB138"
-                                                    d="M2600 224c0,0 0,0 0,0 236,198 259,562 52,809 -254,303 -1849,2089 -2221,1776 -301,-190 917,-1964 1363,-2496 207,-247 570,-287 806,-89z"
-                                                />
-                                                <path
-                                                    fill="#5e17eb"
-                                                    d="M3166 2190c0,0 0,0 0,0 64,210 -58,443 -270,516 -260,90 -1848,585 -1948,252 -104,-230 1262,-860 1718,-1018 212,-73 437,39 500,250z"
-                                                />
-                                                <path
-                                                    fill="#5e17eb"
-                                                    d="M566 3c0,0 0,0 0,0 -219,-26 -427,134 -462,356 -44,271 -255,1921 90,1962 245,62 628,-1392 704,-1869 36,-221 -114,-424 -332,-449z"
-                                                />
-                                            </g>
-                                        </svg>
-                                    </Typography>
+                                    Bienvenue sur Beehive
                                 </Typography>
                             </Box>
                             <Grid item xs={12} >
@@ -122,8 +68,8 @@ const HomeHero: FC = () => {
                                     </Typography>
                                 </Box>
                             </Grid>
-                            <Grid columnSpacing={5} container rowSpacing={1} sx={{ flexDirection: { xs: 'column', md: 'row' } }} justifyContent={"center"} alignItems={"center"}>
-                                <Grid item xs={12} md={9} container spacing={1}>
+                            <Grid container spacing={3} sx={{ flexDirection: { xs: 'column', md: 'row' }, justifyContent: "center", alignItems: "center" }}>
+                                <Grid item xs={12} md={8} container spacing={3}>
                                     <Grid item xs={12} md={6} >
                                         <Box
                                             display={'flex'}
@@ -213,7 +159,7 @@ const HomeHero: FC = () => {
                                             </Typography>
                                         </Box>
                                     </Grid>
-                                    <Grid item xs={12} md={2}  >
+                                    <Grid item xs={12} md={3}  >
                                         <Box
                                             display={'flex'}
                                             flexDirection={'column'}
@@ -258,7 +204,7 @@ const HomeHero: FC = () => {
                                             </Typography>
                                         </Box>
                                     </Grid>
-                                    <Grid item xs={12} md={10} >
+                                    <Grid item xs={12} md={9} >
                                         <Box display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{
                                             height: '100%',
                                             width: '100%',
@@ -271,6 +217,8 @@ const HomeHero: FC = () => {
                                                     height: '100%',
                                                     width: '100%',
                                                     display: 'flex',
+                                                    justifyContent: 'center',
+                                                    alignItems: 'center',
                                                     textAlign: { xs: 'center', md: 'left' },
                                                     borderColor: 'primary.main',
                                                 }}
@@ -281,7 +229,7 @@ const HomeHero: FC = () => {
                                         </Box>
                                     </Grid>
                                 </Grid>
-                                <Grid item xs={12} md={3}>
+                                <Grid item xs={12} md={4}>
                                     <Box display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{
                                         borderRadius: 3,
                                         boxShadow: 3,
@@ -289,20 +237,23 @@ const HomeHero: FC = () => {
                                         height: '100%',
                                         lineHeight: 0,
                                         backgroundColor: 'primary.main',
-                                        padding: '2rem'
+                                        padding: '2rem',
                                     }} >
-                                        <Card sx={{ backgroundColor: 'primary.main' }} >
+                                        <Card sx={{
+                                            borderRadius: 4,
+                                            boxShadow: 3, backgroundColor: 'primary.main'
+                                        }} >
                                             <CardMedia>
                                                 <video
                                                     autoPlay
                                                     loop
                                                     muted
                                                     poster="/images/beehive.png"
-                                                    height={400}
-                                                    width={220}
+                                                    height={"100%"}
+                                                    width={"100%"}
                                                 >
                                                     <source
-                                                        src="/videos/beehave1.mp4"
+                                                        src="/videos/beehive-hero.mp4"
                                                         type="video/mp4"
                                                     />
                                                 </video>
