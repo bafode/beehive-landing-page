@@ -5,7 +5,7 @@
   <br />
 </h1>
 
-![screenshot](public/images/beehive-capture4.png)
+![screenshot](public/images/beehive-capture5.png)
 
 **Beehive** landing page is built on top of Material UI and fully coded in **React**.
 Simple & light is designed to provide all the basic components using the `sx` prop for a developer need to create landing page for Online Course product.
@@ -59,7 +59,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <h6>
   <br />
   <p>
-   <a href="https://github.com/bafode"><img src="" alt="Bafode Camara" width="52" height="52"></a>
+   <a href="https://avatars.githubusercontent.com/u/62437771?s=40&v=4"><img src="" alt="Bafode Camara" width="52" height="52"></a>
   </p>
   <p>
   Designed by
