@@ -59,7 +59,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <h6>
   <br />
   <p>
-   <a href="https://github.com/bafode"><img src="" alt="Bafode Camara" width="52" height="52"></a>
+   <a href="https://avatars.githubusercontent.com/u/62437771?s=40&v=4"><img src="" alt="Bafode Camara" width="52" height="52"></a>
   </p>
   <p>
   Designed by
