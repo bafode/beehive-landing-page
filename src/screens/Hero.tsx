@@ -83,12 +83,10 @@ const HomeHero: FC = () => {
                                     size="medium"
                                     sx={{
                                         backgroundColor: 'secondary.main',
-                                        ':hover': {
-                                            backgroundColor: '#0056b3',
-                                        },
+                                        color: 'black',
                                     }}
                                 >
-                                    Inscris-toi
+                                    S'inscrire
                                 </Button>
                             </Box>
                         </Grid>
