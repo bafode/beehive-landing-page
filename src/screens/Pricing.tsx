@@ -13,15 +13,14 @@ import { Pagination } from 'swiper/modules';
 const Pricing: FC = () => {
     const isMobile = useMediaQuery((theme: any) => theme.breakpoints.down('sm'));
     return (
-        <Box id='nos-offres' sx={{ py: { xs: 2, md: 4 }, backgroundColor: 'background.paper' }}>
+        <Box id='nos-offres' sx={{ backgroundColor: 'background.paper' }}>
             <Container maxWidth='xl'>
                 <Box
                     sx={{
                         backgroundColor: 'background.paper',
                         borderRadius: 10,
-                        py: { xs: 2, md: 4 },
-                        px: { xs: 1, md: 4 },
-                        textAlign: 'center'
+                        textAlign: 'center',
+                        paddingBottom: { xs: 2, md: 4 },
                     }}>
                     <Typography variant="h1" color={'primary.main'} sx={{ fontSize: 40, pb: '2rem' }}>
                         Découvre nos offres
