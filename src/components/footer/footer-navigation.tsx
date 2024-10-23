@@ -8,10 +8,9 @@ import ContactInput from '../ContactInput'
 
 
 const companyMenu: Array<Navigation> = [
-  { label: 'Contact Us', path: '#' },
-  { label: 'Privacy & Policy', path: '#' },
-  { label: 'Term & Condition', path: '#' },
-  { label: 'FAQ', path: '#' },
+  { label: 'Nous Contacter', path: '#' },
+  { label: "Centre d'aide", path: '#' },
+  { label: 'Conditions et politique de Confidentialité', path: '#' },
 ]
 
 const platformMenu: Array<Navigation> = [

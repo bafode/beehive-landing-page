@@ -69,10 +69,10 @@ const ContactInput: FC = () => {
     };
 
     return (
-        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}>
             <form onSubmit={formik.handleSubmit} style={{ width: '100%' }}>
 
-                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}>
                     <Stack
                         direction={{ xs: 'column', md: 'row' }}
                         spacing={{ xs: 2, md: 0 }} // Space between elements on small screens

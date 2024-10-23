@@ -11,9 +11,6 @@ const style = {
     py: 1,
     width: '100%',
     maxWidth: 360,
-    borderRadius: 3,
-    border: '1px solid',
-    borderColor: 'primary.main',
     minHeight: 'auto',
     backgroundColor: "#F3F2FF",
     boxShadow: 3,
@@ -23,14 +20,17 @@ const style = {
 
 const ConceptCard: FC<Props> = ({ item }) => {
     return (
-        <Card sx={style}>
+        <Card sx={{
+            ...style,
+            borderRadius: 5,
+        }}>
 
             <CardContent>
-                <Typography textAlign={"center"} gutterBottom variant="h2" fontSize={"1.2rem"} sx={{ fontWeight: "bold" }}>
+                <Typography textAlign={"start"} gutterBottom variant="h2" fontSize={"1.6rem"} sx={{ fontWeight: "bold" }}>
                     {item.title}
                 </Typography>
                 <Divider />
-                <Typography marginTop={"1rem"} variant="body2" color="black" fontSize={"1.2rem"} textAlign={'start'}>
+                <Typography marginTop={"1rem"} variant="body2" color="black" fontSize={"1.5rem"} textAlign={'start'}>
                     {item.description}
                 </Typography>
             </CardContent>

@@ -10,7 +10,7 @@ const HomeComprendre: FC = () => {
             id="mentors"
             sx={{
                 backgroundColor: 'background.paper',
-                py: { xs: 2, md: 4 }, px: { xs: 2, md: 8 }
+                px: { xs: 2, md: 4 }
             }}
         >
             <Container maxWidth='xl'>
@@ -18,7 +18,7 @@ const HomeComprendre: FC = () => {
                     sx={{
                         backgroundColor: 'background.paper',
                         borderRadius: 10,
-                        py: { xs: 16, md: 28, lg: 16 },
+                        py: { xs: 2, md: 4 },
                         px: { xs: 4, md: 8 },
                         textAlign: 'center'
                     }}
