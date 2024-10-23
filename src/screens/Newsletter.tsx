@@ -10,14 +10,14 @@ import ContactInput from '@/components/ContactInput';
 
 const HomeNewsLetter: FC = () => {
     return (
-        <Box id='contact' sx={{ backgroundColor: 'background.paper', py: { xs: 2, md: 4 }, px: { xs: 2, md: 8 } }}>
+        <Box id='contact' sx={{ backgroundColor: 'background.paper', py: { xs: 2, md: 4 } }}>
             <Container maxWidth='xl'>
                 <Box
                     sx={{
                         backgroundColor: '#F3F2FF',
                         borderRadius: 10,
                         py: { xs: 2, md: 4 },
-                        px: { xs: 4, md: 8 },
+                        px: { xs: 1, md: 4 },
                         textAlign: 'center',
                     }}
                 >
@@ -28,10 +28,10 @@ const HomeNewsLetter: FC = () => {
                             </Typography>
                         </Grid>
                         <Grid container item md={12} sx={{ alignItems: { md: 'center' }, justifyContent: { md: 'center' } }}>
-                            <Grid item xs={12} md={2}>
-                                <Image src="/images/logo.png" width={500} height={300} alt="logo" />
+                            <Grid item xs={12} md={3} justifyContent={'center'} alignItems={'center'}>
+                                <Image src="/images/logo.png" width={600} height={450} alt="logo" />
                             </Grid>
-                            <Grid item xs={12} md={10}>
+                            <Grid item xs={12} md={9}>
                                 <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
                                     <Typography sx={{ mb: 1, fontSize: { xs: 18, md: 26 } }}>
                                         Inscris-toi dès maintenant avec ton adresse mail pour recevoir une notification dès le lancement de BeeHive.
@@ -39,10 +39,10 @@ const HomeNewsLetter: FC = () => {
                                     <Typography sx={{ mb: 1, fontSize: { xs: 18, md: 26 } }}>
                                         Ne manque pas l'opportunité de faire partie de notre communauté étudiante dès le premier jour!
                                     </Typography>
+                                    <ContactInput />
                                 </Box>
                             </Grid>
                         </Grid>
-                        <ContactInput />
                     </Grid>
                 </Box>
             </Container>

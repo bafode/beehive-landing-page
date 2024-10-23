@@ -9,6 +9,13 @@ import { MUIProvider } from '@/providers'
 import 'slick-carousel/slick/slick.css'
 import '@/styles/globals.css'
 import '@/styles/react-slick.css'
+import '@/styles/react-slick.css';
+import '@/styles/Swiper.css'; // Si ce fichier existe réellement
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
+
 import { NextPageWithLayout } from '@/interfaces/layout'
 // import 'slick-carousel/slick/slick-theme.css'
 

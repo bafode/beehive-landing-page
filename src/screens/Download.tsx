@@ -48,10 +48,10 @@ const HomeDownload: FC = () => {
                         }}
                     >
                         <StyledButton disableHoverEffect size="large">
-                            <Image src="/images/google-play.png" width={300} height={80} alt="Google Play Logo" />
+                            <Image src="/images/icons/google.svg" width={500} height={302} alt="Google Play Logo" />
                         </StyledButton>
                         <StyledButton disableHoverEffect size="large">
-                            <Image src="/images/app-store-logo.jpg" width={300} height={80} alt="App Store Logo" />
+                            <Image src="/images/icons/appstore.svg" width={500} height={302} alt="App Store Logo" />
                         </StyledButton>
 
 

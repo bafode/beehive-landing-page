@@ -8,12 +8,11 @@ const DynamicHomeOurConcepts = dynamic(() => import('../screens/Concept'))
 const DynamicHomeComprendre = dynamic(() => import('../screens/Comprendre'))
 const DynamicHomePricing = dynamic(() => import('../screens/Pricing'))
 const DynamicHomeNewsLetter = dynamic(() => import('../screens/Newsletter'))
-const DynamicHomeDownload = dynamic(() => import('../screens/Download'))
 
 const Home: NextPageWithLayout = () => {
   return (
     <Fragment>
-      <Grid spacing={2}>
+      <Grid container spacing={2}>
         <Grid item xs={12}>
           <DynamicHomeHero />
         </Grid>
@@ -28,9 +27,6 @@ const Home: NextPageWithLayout = () => {
         </Grid>
         <Grid item xs={12}>
           <DynamicHomeNewsLetter />
-        </Grid>
-        <Grid item xs={12}>
-          <DynamicHomeDownload />
         </Grid>
       </Grid>
     </Fragment>
