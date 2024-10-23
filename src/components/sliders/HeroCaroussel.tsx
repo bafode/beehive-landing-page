@@ -1,4 +1,5 @@
-import React, { FC, useState } from 'react';
+/* eslint-disable */
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -18,7 +19,11 @@ const slide_img = [
 ];
 
 const HeroSlider = () => {
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeIndex, setActiveIndex] = useState<number>(1);
+
+    const normalizeIndex = (index: number, totalSlides: number) => {
+        return index >= totalSlides ? index % totalSlides : index;
+    };
 
     return (
         <Box
@@ -40,6 +45,7 @@ const HeroSlider = () => {
                 grabCursor={true}
                 centeredSlides={true}
                 slidesPerView={3}
+                loop={true}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 50,
@@ -52,7 +58,7 @@ const HeroSlider = () => {
                 modules={[Pagination, Autoplay]}
                 className="mySwiper"
                 style={{ width: '100%', height: '100%' }}
-                onSlideChange={(swiper: SwiperClass) => setActiveIndex(swiper.activeIndex)}
+                onSlideChange={(swiper: SwiperClass) => setActiveIndex(swiper.realIndex)}
             >
                 {slide_img.map((image, i) => (
                     <SwiperSlide key={i} style={{ display: 'flex', justifyContent: 'center', height: '100%' }}>
@@ -64,7 +70,7 @@ const HeroSlider = () => {
                                 height: '100%',
                                 objectFit: 'contain',
                                 transition: 'transform 0.5s ease',
-                                transform: activeIndex === i ? 'scale(1)' : 'scale(.9)',
+                                transform: activeIndex === normalizeIndex(i, slide_img.length) ? 'scale(1)' : 'scale(.9)',
                             }}
                         />
                     </SwiperSlide>
@@ -74,4 +80,4 @@ const HeroSlider = () => {
     );
 };
 
-export default HeroSlider
+export default HeroSlider;

@@ -30,6 +30,7 @@ const HomeOurConcept: FC = () => {
                         backgroundColor: 'background.paper',
                         borderRadius: 10,
                         textAlign: 'center',
+                        py: { xs: 2, md: 4 },
                     }}
                 >
                     <Typography

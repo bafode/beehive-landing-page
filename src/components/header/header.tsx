@@ -2,12 +2,10 @@ import React, { FC } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
 
 
 const Header: FC = () => {
-  const { breakpoints } = useTheme();
   return (
     <AppBar position='static' sx={{ background: 'white' }}>
       <Container maxWidth="xl">
