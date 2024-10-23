@@ -1,5 +1,4 @@
-/* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
 import Box from '@mui/material/Box';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -18,10 +17,10 @@ const slide_img = [
     "/images/slider3.png",
 ];
 
-const HeroSlider = () => {
+const HeroSlider: FC = () => {
     const [activeIndex, setActiveIndex] = useState<number>(1);
 
-    const normalizeIndex = (index: number, totalSlides: number) => {
+    const normalizeIndex = (index: number, totalSlides: number): number => {
         return index >= totalSlides ? index % totalSlides : index;
     };
 
