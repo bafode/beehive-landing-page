@@ -8,9 +8,9 @@ const HomeComprendre: FC = () => {
     return (
         <Box
             id="mentors"
+            px={{ xs: 2, md: 6 }}
             sx={{
                 backgroundColor: 'background.paper',
-                px: { xs: 2, md: 4 }
             }}
         >
             <Container maxWidth='xl'>
@@ -19,34 +19,33 @@ const HomeComprendre: FC = () => {
                         backgroundColor: 'background.paper',
                         borderRadius: 10,
                         py: { xs: 2, md: 4 },
-                        px: { xs: 4, md: 8 },
                         textAlign: 'center'
                     }}
                 >
-                    <Grid container justifyContent={'center'} rowSpacing={3} alignItems={'center'} maxWidth="lg" >
+                    <Grid container justifyContent={'center'} rowSpacing={3} alignItems={'center'} maxWidth="xl" >
                         <Grid item xs={12}>
                             <Typography textAlign={"center"} color={"primary.main"} variant="h1" sx={{ fontSize: 40 }}>
                                 Comprendre Beehive
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} >
-                            <Box display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{ lineHeight: 0 }}  >
-                                <Card >
-                                    <video
-                                        autoPlay
-                                        loop
-                                        muted
-                                        poster="/images/maquette.png"
-                                        height={"100%"}
-                                        width={"100%"}
-                                    >
-                                        <source
-                                            src="/videos/comprendre.mp4"
-                                            type="video/mp4"
-                                        />
-                                    </video>
-                                </Card>
-                            </Box>
+                        <Grid container item xs={12} >
+
+                            <Card sx={{ borderRadius: 8, width: '100%' }} >
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    poster="/images/maquette.png"
+                                    height={"100%"}
+                                    width={"100%"}
+                                >
+                                    <source
+                                        src="/videos/comprendre.mp4"
+                                        type="video/mp4"
+                                    />
+                                </video>
+                            </Card>
+
                         </Grid>
                     </Grid>
                 </Box>

@@ -9,7 +9,7 @@ interface Props {
 
 const MainLayout: FC<Props> = ({ children }) => {
   return (
-    <Box component="main">
+    <Box component="main" sx={{ backgroundColor: 'white' }}>
       <Header />
       {children}
       <Footer />

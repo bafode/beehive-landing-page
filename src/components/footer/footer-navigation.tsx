@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid'
 import MuiLink from '@mui/material/Link'
 import type { Navigation } from '@/interfaces/navigation'
 import { FooterSectionTitle } from '@/components/footer'
-import ContactInput from '../ContactInput'
 
 
 const companyMenu: Array<Navigation> = [
@@ -42,23 +41,23 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
 
 const FooterNavigation: FC = () => {
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={12} md={4}>
+    <Grid container spacing={4}>
+      <Grid item xs={12} md={6}>
         <FooterSectionTitle title="Besoin d'aide?" />
         {companyMenu.map(({ label, path }, index) => (
           <NavigationItem key={index + path} label={label} path={path} />
         ))}
       </Grid>
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12} md={6}>
         <FooterSectionTitle title="Utiliser Beehive" />
         {platformMenu.map(({ label, path }, index) => (
           <NavigationItem key={index + path} label={label} path={path} />
         ))}
       </Grid>
-      <Grid item xs={12} md={5}>
+      {/* <Grid item xs={12} md={5}>
         <FooterSectionTitle title="Preinscription" />
         <ContactInput />
-      </Grid>
+      </Grid> */}
     </Grid>
   )
 }

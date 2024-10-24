@@ -13,7 +13,11 @@ import { Pagination } from 'swiper/modules';
 const Pricing: FC = () => {
     const isMobile = useMediaQuery((theme: any) => theme.breakpoints.down('sm'));
     return (
-        <Box id='nos-offres' sx={{ backgroundColor: 'background.paper' }}>
+        <Box
+            px={{ xs: 2, md: 6 }}
+            id='nos-offres'
+            sx={{ backgroundColor: 'background.paper' }}
+        >
             <Container maxWidth='xl'>
                 <Box
                     sx={{
@@ -100,18 +104,18 @@ const Pricing: FC = () => {
                                             </Box>
 
                                         </Box>
-                                        <Typography
+                                        {/* <Typography
                                             color={'primary.main'}
                                             variant="h4"
                                             sx={{ fontSize: "2rem", fontWeight: "bold" }}
                                         >
                                             0€/MOIS
-                                        </Typography>
+                                        </Typography> */}
                                     </CardContent>
                                     <CardActions>
-                                        <Button fullWidth size="small" variant="outlined" color="inherit"
+                                        <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: 'primary.main', color: 'white' }}
                                         >
-                                            Télecharger Beehive
+                                            0€/MOIS
                                         </Button>
                                     </CardActions>
                                 </Card>
@@ -217,17 +221,17 @@ const Pricing: FC = () => {
                                             </Box>
 
                                         </Box>
-                                        <Typography
+                                        {/* <Typography
                                             variant="h4"
                                             sx={{ fontSize: "2rem", color: 'secondary.main', fontWeight: "bold" }}
                                         >
                                             10€/MOIS
-                                        </Typography>
+                                        </Typography> */}
                                     </CardContent>
                                     <CardActions>
                                         <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: "white", ":hover": { backgroundColor: "secondary.main", color: 'white' } }}
                                         >
-                                            <Typography fontSize={'10px'}>commencer mon essai gratituit pendant 1 mois</Typography>
+                                            <Typography fontSize={'10px'}>10€/MOIS</Typography>
                                         </Button>
                                     </CardActions>
                                 </Card>
@@ -235,96 +239,7 @@ const Pricing: FC = () => {
                         </Grid>
                     )}
                     {isMobile && (
-                        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-                            <SwiperSlide>
-                                <Card
-                                    variant="outlined"
-                                    sx={{
-                                        bgcolor: "white",
-                                        borderRadius: 3,
-                                        boxShadow: 3,
-                                        height: '100%',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'space-between'
-                                    }}
-                                >
-                                    <CardContent>
-                                        <Typography color={'primary.main'} variant="h2" component="div" align="center" gutterBottom>
-                                            GRATUIT
-                                        </Typography>
-                                        <Divider sx={{ width: 1 }} />
-                                        <Box>
-
-
-                                            <Box
-                                                key={1}
-                                                display="flex"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                my={1}
-                                            >
-                                                <Check color="success" />
-                                                <Typography sx={{ paddingLeft: '1rem' }}>Chat en duo en groupe de 3</Typography>
-                                            </Box>
-                                            <Box
-                                                key={1}
-                                                display="flex"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                mb={1}
-                                            >
-                                                <Check color="success" />
-                                                <Typography textAlign={'start'} sx={{ paddingLeft: '1rem' }}>Accès aux Posts Inspiration et Communauté</Typography>
-                                            </Box>
-                                            <Box
-                                                key={1}
-                                                display="flex"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                mb={1}
-                                            >
-                                                <Check color="success" />
-                                                <Typography sx={{ paddingLeft: '1rem' }}>Création de Posts</Typography>
-                                            </Box>
-                                            <Box
-                                                key={1}
-                                                display="flex"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                mb={1}
-                                            >
-                                                <Check color="success" />
-                                                <Typography sx={{ paddingLeft: '1rem' }}>Epingler jusqu'a 50 posts</Typography>
-                                            </Box>
-                                            <Box
-                                                key={1}
-                                                display="flex"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                mb={1}
-                                            >
-                                                <Check color="success" />
-                                                <Typography sx={{ paddingLeft: '1rem' }}>Visibilité Standard</Typography>
-                                            </Box>
-
-                                        </Box>
-                                        <Typography
-                                            color={'primary.main'}
-                                            variant="h4"
-                                            sx={{ fontSize: "2rem", fontWeight: "bold" }}
-                                        >
-                                            0€/MOIS
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button fullWidth size="small" variant="outlined" color="inherit"
-                                        >
-                                            Télecharger Beehive
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </SwiperSlide>
+                        <Swiper pagination={true} modules={[Pagination]} className="mySwiper" style={{ paddingBottom: '3rem' }}>
                             <SwiperSlide>
                                 <Card
                                     variant="elevation"
@@ -426,17 +341,106 @@ const Pricing: FC = () => {
                                             </Box>
 
                                         </Box>
-                                        <Typography
+                                        {/* <Typography
                                             variant="h4"
                                             sx={{ fontSize: "2rem", color: 'secondary.main', fontWeight: "bold" }}
                                         >
                                             10€/MOIS
-                                        </Typography>
+                                        </Typography> */}
                                     </CardContent>
                                     <CardActions>
                                         <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: "white", ":hover": { backgroundColor: "secondary.main", color: 'white' } }}
                                         >
-                                            <Typography fontSize={'10px'}>commencer mon essai gratituit pendant 1 mois</Typography>
+                                            <Typography fontSize={'10px'}> 10€/MOIS</Typography>
+                                        </Button>
+                                    </CardActions>
+                                </Card>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Card
+                                    variant="outlined"
+                                    sx={{
+                                        bgcolor: "white",
+                                        borderRadius: 3,
+                                        boxShadow: 3,
+                                        height: '100%',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'space-between'
+                                    }}
+                                >
+                                    <CardContent>
+                                        <Typography color={'primary.main'} variant="h2" component="div" align="center" gutterBottom>
+                                            GRATUIT
+                                        </Typography>
+                                        <Divider sx={{ width: 1 }} />
+                                        <Box>
+
+
+                                            <Box
+                                                key={1}
+                                                display="flex"
+                                                justifyContent="flex-start"
+                                                alignItems="center"
+                                                my={1}
+                                            >
+                                                <Check color="success" />
+                                                <Typography sx={{ paddingLeft: '1rem' }}>Chat en duo en groupe de 3</Typography>
+                                            </Box>
+                                            <Box
+                                                key={1}
+                                                display="flex"
+                                                justifyContent="flex-start"
+                                                alignItems="center"
+                                                mb={1}
+                                            >
+                                                <Check color="success" />
+                                                <Typography textAlign={'start'} sx={{ paddingLeft: '1rem' }}>Accès aux Posts Inspiration et Communauté</Typography>
+                                            </Box>
+                                            <Box
+                                                key={1}
+                                                display="flex"
+                                                justifyContent="flex-start"
+                                                alignItems="center"
+                                                mb={1}
+                                            >
+                                                <Check color="success" />
+                                                <Typography sx={{ paddingLeft: '1rem' }}>Création de Posts</Typography>
+                                            </Box>
+                                            <Box
+                                                key={1}
+                                                display="flex"
+                                                justifyContent="flex-start"
+                                                alignItems="center"
+                                                mb={1}
+                                            >
+                                                <Check color="success" />
+                                                <Typography sx={{ paddingLeft: '1rem' }}>Epingler jusqu'a 50 posts</Typography>
+                                            </Box>
+                                            <Box
+                                                key={1}
+                                                display="flex"
+                                                justifyContent="flex-start"
+                                                alignItems="center"
+                                                mb={1}
+                                            >
+                                                <Check color="success" />
+                                                <Typography sx={{ paddingLeft: '1rem' }}>Visibilité Standard</Typography>
+                                            </Box>
+
+                                        </Box>
+                                        {/* <Typography
+                                            color={'primary.main'}
+                                            variant="h4"
+                                            sx={{ fontSize: "2rem", fontWeight: "bold" }}
+                                        >
+                                            0€/MOIS
+                                        </Typography> */}
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: 'primary.main', color: 'white' }}
+                                        >
+                                            0€/MOIS
                                         </Button>
                                     </CardActions>
                                 </Card>
