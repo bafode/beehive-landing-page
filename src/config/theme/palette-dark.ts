@@ -5,7 +5,7 @@ const paletteDark: PaletteOptions = {
   mode: 'dark',
   background: {
     default: grey[900],
-    paper: '#222128',
+    paper: 'white',
   },
   text: {
     primary: grey[100],

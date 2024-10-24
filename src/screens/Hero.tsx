@@ -4,10 +4,6 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { Button, Card } from '@mui/material';
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 import HeroSlider from '@/components/sliders/HeroCaroussel';
 
 const HomeHero: FC = () => {
@@ -41,7 +37,7 @@ const HomeHero: FC = () => {
                             height: '100%', // Ajustement de la hauteur pour mobile
                         }}
                     >
-                        <Grid item xs={12} md={7}>
+                        <Grid item xs={12} md={8}>
                             <Box
                                 sx={{
                                     textAlign: 'left',
@@ -91,7 +87,7 @@ const HomeHero: FC = () => {
                             </Box>
                         </Grid>
 
-                        <Grid item xs={12} md={5}>
+                        <Grid item xs={12} md={4} >
                             <HeroSlider />
                         </Grid>
                     </Grid>

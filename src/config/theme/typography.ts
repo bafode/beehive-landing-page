@@ -1,7 +1,7 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography'
 
 export const fontFamily = [
-  '"Cabin",-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+  "Montserrat", "Poppins",
 ].join(',')
 
 const headingLineHeight = 1.4
@@ -44,6 +44,10 @@ const typography: TypographyOptions = {
   },
   body1: {
     fontSize: '1rem',
+    margin: 0,
+    color: '#212121',
+    fontWeight: 400,
+    lineHeight: 1.5,
   },
   body2: {
     fontSize: '0.9rem',

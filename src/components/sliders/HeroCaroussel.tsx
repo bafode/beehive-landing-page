@@ -56,7 +56,7 @@ const HeroSlider: FC = () => {
                 pagination={{ clickable: true }}
                 modules={[Pagination, Autoplay]}
                 className="mySwiper"
-                style={{ width: '100%', height: '100%' }}
+                style={{ width: '100%', height: '100%', paddingBottom: '3rem' }}
                 onSlideChange={(swiper: SwiperClass) => setActiveIndex(swiper.realIndex)}
             >
                 {slide_img.map((image, i) => (

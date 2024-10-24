@@ -10,7 +10,7 @@ interface Props {
 const style = {
     py: 1,
     width: '100%',
-    maxWidth: 360,
+    maxWidth: '100%',
     minHeight: 'auto',
     backgroundColor: "#F3F2FF",
     boxShadow: 3,
@@ -29,8 +29,10 @@ const ConceptCard: FC<Props> = ({ item }) => {
                 <Typography textAlign={"start"} gutterBottom variant="h2" fontSize={"1.6rem"} sx={{ fontWeight: "bold" }}>
                     {item.title}
                 </Typography>
-                <Divider />
-                <Typography marginTop={"1rem"} variant="body2" color="black" fontSize={"1.5rem"} textAlign={'start'}>
+                <Divider sx={{ height: "3px" }} />
+                <Typography marginTop={"1rem"} color="black" textAlign={'start'} style={{
+                    fontSize: '1.2rem',
+                }}>
                     {item.description}
                 </Typography>
             </CardContent>

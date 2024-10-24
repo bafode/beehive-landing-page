@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -17,12 +17,9 @@ const HomeOurConcept: FC = () => {
 
     return (
         <Box
+            px={{ xs: 2, md: 6 }}
             id='concepts'
-            sx={{
-                backgroundColor: 'background.paper',
-                paddingTop: { xs: 2, md: 4 },
-                px: { xs: 1, md: 4 },
-            }}
+            sx={{ backgroundColor: 'background.paper' }}
         >
             <Container maxWidth='xl'>
                 <Box
@@ -30,23 +27,22 @@ const HomeOurConcept: FC = () => {
                         backgroundColor: 'background.paper',
                         borderRadius: 10,
                         textAlign: 'center',
-                        py: { xs: 2, md: 4 },
-                    }}
-                >
+                        paddingBottom: { xs: 2, md: 4 },
+                    }}>
                     <Typography
                         variant="h1"
                         fontWeight={'bold'}
                         color={'primary.main'}
-                        sx={{ fontSize: 40, pb: '2rem' }}
+                        sx={{ fontSize: { xs: 30, md: 40 }, pb: '1.5rem' }}
                     >
                         Notre Concept
                     </Typography>
 
                     {/* Affichage en grille pour les écrans non mobiles */}
                     {!isMobile && (
-                        <Grid container spacing={4}>
+                        <Grid container spacing={0} maxWidth="xl" justifyContent="space-between">
                             {conceptData.map((item: Concept) => (
-                                <Grid key={item.id} item xs={12} sm={6} md={4} lg={4}>
+                                <Grid key={item.id} item xs={12} sm={6} md={4} lg={3}>
                                     <ConceptCard key={item.id} item={item} />
                                 </Grid>
                             ))}
@@ -55,7 +51,13 @@ const HomeOurConcept: FC = () => {
 
                     {/* Affichage du carrousel uniquement pour les écrans mobiles */}
                     {isMobile && (
-                        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+                        <Swiper
+                            pagination={{ clickable: true }}
+                            modules={[Pagination]}
+                            spaceBetween={20}
+                            className="mySwiper"
+                            style={{ paddingBottom: '2rem' }}
+                        >
                             {conceptData.map((item: Concept) => (
                                 <SwiperSlide key={item.id}>
                                     <ConceptCard key={item.id} item={item} />
@@ -67,6 +69,6 @@ const HomeOurConcept: FC = () => {
             </Container>
         </Box>
     );
-}
+};
 
 export default HomeOurConcept;
