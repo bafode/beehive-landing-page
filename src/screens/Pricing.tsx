@@ -113,9 +113,15 @@ const Pricing: FC = () => {
                                         </Typography> */}
                                     </CardContent>
                                     <CardActions>
-                                        <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: 'primary.main', color: 'white' }}
+                                        <Button fullWidth size="small" variant="outlined" sx={{
+                                            backgroundColor: 'primary.main', color: 'white', '&:hover': {
+                                                backgroundColor: 'primary.main', // Keep the same color as default
+                                                color: 'white', // Keep the same text color as default
+                                                boxShadow: 'none', // Optional: remove hover shadow if applied
+                                            },
+                                        }}
                                         >
-                                            0€/MOIS
+                                            contactez-nous
                                         </Button>
                                     </CardActions>
                                 </Card>
@@ -221,17 +227,16 @@ const Pricing: FC = () => {
                                             </Box>
 
                                         </Box>
-                                        {/* <Typography
-                                            variant="h4"
-                                            sx={{ fontSize: "2rem", color: 'secondary.main', fontWeight: "bold" }}
-                                        >
-                                            10€/MOIS
-                                        </Typography> */}
                                     </CardContent>
                                     <CardActions>
-                                        <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: "white", ":hover": { backgroundColor: "secondary.main", color: 'white' } }}
+                                        <Button fullWidth size="small" variant="outlined" sx={{
+                                            backgroundColor: "white", '&:hover': {
+                                                backgroundColor: 'white',
+                                                boxShadow: 'none', // Optional: remove hover shadow if applied
+                                            },
+                                        }}
                                         >
-                                            <Typography fontSize={'10px'}>10€/MOIS</Typography>
+                                            <Typography fontSize={'10px'} fontWeight={'bold'}>contactez-nous</Typography>
                                         </Button>
                                     </CardActions>
                                 </Card>
@@ -349,9 +354,15 @@ const Pricing: FC = () => {
                                         </Typography> */}
                                     </CardContent>
                                     <CardActions>
-                                        <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: "white", ":hover": { backgroundColor: "secondary.main", color: 'white' } }}
+                                        <Button fullWidth size="small" variant="outlined" sx={{
+                                            fontWeight: 'bold',
+                                            backgroundColor: "white", '&:hover': {
+                                                backgroundColor: 'white',
+                                                boxShadow: 'none', // Optional: remove hover shadow if applied
+                                            },
+                                        }}
                                         >
-                                            <Typography fontSize={'10px'}> 10€/MOIS</Typography>
+                                            <Typography fontSize={'10px'} fontWeight={'bold'}> contactez-nous</Typography>
                                         </Button>
                                     </CardActions>
                                 </Card>
@@ -438,9 +449,16 @@ const Pricing: FC = () => {
                                         </Typography> */}
                                     </CardContent>
                                     <CardActions>
-                                        <Button fullWidth size="small" variant="outlined" sx={{ backgroundColor: 'primary.main', color: 'white' }}
+                                        <Button fullWidth size="small" variant="outlined" sx={{
+                                            fontWeight: 'bold',
+                                            backgroundColor: 'primary.main', color: 'white', '&:hover': {
+                                                backgroundColor: 'primary.main', // Keep the same color as default
+                                                color: 'white', // Keep the same text color as default
+                                                boxShadow: 'none', // Optional: remove hover shadow if applied
+                                            },
+                                        }}
                                         >
-                                            0€/MOIS
+                                            contactez-nous
                                         </Button>
                                     </CardActions>
                                 </Card>

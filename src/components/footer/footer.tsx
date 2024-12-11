@@ -16,7 +16,7 @@ const Footer: FC = () => {
       <Grid container spacing={4}>
         <Grid item xs={12} md={4}>
           <Box sx={{ color: "black", width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
-            <Image src={'/images/logo.png'} width={170} height={90} alt='logo' />
+            <Image src={'/images/beehive_logo.svg'} width={170} height={90} alt='logo' />
             <Box display={"flex"} justifyContent={'flex-start'} alignItems={'center'} pb={2}>
               <EmailIcon sx={{ color: 'primary.main' }} />
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mx: 2 }}>

@@ -11,7 +11,6 @@ const style = {
     py: 1,
     width: '100%',
     maxWidth: '100%',
-    minHeight: 'auto',
     backgroundColor: "#F3F2FF",
     boxShadow: 3,
     height: '100%',

@@ -1,126 +1,114 @@
-import { Stack, InputBase, Button, Box, Snackbar } from "@mui/material";
+import { Stack, InputBase, Button, Box, Snackbar, Alert } from "@mui/material";
 import React, { FC, useState } from "react";
-import * as yup from 'yup';
-import { useFormik } from 'formik';
-import { mutate } from 'swr';
+import * as yup from "yup";
+import { useFormik } from "formik";
+import useSWR, { mutate } from "swr";
 import axiosInstance from "@/api/axiosInstance";
 
-// Define Yup schema for validation
+// Définition du schéma de validation Yup
 const validationSchema = yup.object({
-    email: yup.string().email('Invalid email address').required('Email is required'),
+    email: yup.string().email("Adresse e-mail invalide").required("L'adresse e-mail est requise"),
 });
 
 const ContactInput: FC = () => {
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
     const [openSnackbar, setOpenSnackbar] = useState(false);
+    const [message, setMessage] = useState("");
+    const [severity, setSeverity] = useState<"success" | "error">("success");
 
-    // SWR fetcher function
-    // const fetcher:any = async (url: string) => {
-    //     const response = await axiosInstance.get(url);
-    //     return response.data;
-    // };
+    const apiUrl = "http://185.98.139.242:4000/v1/landing-contacts"; // Remplacez par votre point d'API
 
-    // Example endpoint URL
-    const apiUrl = '/api/update-email'; // Replace with your actual API endpoint
-
-    // SWR hook to fetch initial data
-    // const { data, error } = useSWR(apiUrl, fetcher);
-
-    // Formik hook for form handling and validation
+    // Gestion du formulaire avec Formik
     const formik = useFormik({
-        initialValues: {
-            email: '',
-        },
+        initialValues: { email: "" },
         validationSchema: validationSchema,
         onSubmit: async (values) => {
             try {
-                // Make API call to update email
+                // Envoi de la requête POST
                 await axiosInstance.put(apiUrl, { email: values.email });
 
-                // Trigger SWR revalidation and update local cache
+                // Met à jour la donnée locale et invalide le cache
                 mutate(apiUrl);
 
-                // Reset form after successful submission
-                formik.resetForm();
-
-                // Show success message
-                setMessage('Email updated successfully!');
+                // Affichage du message de succès
+                setMessage("Inscription réussie !");
+                setSeverity("success");
                 setOpenSnackbar(true);
+
+                // Réinitialise le formulaire
+                formik.resetForm();
             } catch (error) {
-                console.error('Error updating email:', error);
-                // Show error message if needed
+                console.error("Erreur lors de l'inscription :", error);
+
+                // Affichage du message d'erreur
+                setMessage("Une erreur s'est produite. Veuillez réessayer.");
+                setSeverity("error");
+                setOpenSnackbar(true);
             }
         },
     });
 
-
-    const handleInputChange: any = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(event.target.value);
-        formik.handleChange(event); // Update Formik state
-    };
-
-    const handleSubmit: any = () => {
-        console.log(email);
-    };
-
-    const handleCloseSnackbar: any = () => {
+    // Ferme la snackbar
+    const handleCloseSnackbar = () => {
         setOpenSnackbar(false);
     };
 
     return (
-        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}>
-            <form onSubmit={formik.handleSubmit} style={{ width: '100%' }}>
-
-                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}>
-                    <Stack
-                        direction={{ xs: 'column', md: 'row' }}
-                        spacing={{ xs: 2, md: 0 }} // Space between elements on small screens
-                        alignItems="center"
-                        justifyContent={'center'}
-                        sx={{ width: '100%', maxWidth: 800 }} // Limiting the max width for better centering
-                    >
-                        <InputBase
-                            sx={{
-                                backgroundColor: 'background.paper',
-                                border: '1px solid', // Added border
-                                borderColor: 'primary.main', // Border color
-                                borderRadius: { xs: '4px', md: '4px 0 0 4px' }, // Rounded corners for the left side
-                                width: '100%',
-                                height: 48,
-                                pl: 1, // Padding left
-                                mb: { xs: 1, md: 0 },
-                            }}
-                            id="email"
-                            name="email"
-                            type="text"
-                            placeholder="Adresse mail"
-                            value={formik.values.email}
-                            onChange={handleInputChange}
-                            error={formik.touched.email && Boolean(formik.errors.email)}
-                        />
-                        <Button
-                            type="submit"
-                            variant="contained"
-                            size="large"
-                            sx={{
-                                borderRadius: { xs: '4px', md: '0 4px 4px 0' }, // Rounded corners for the right side
-                                height: 48,
-                                width: { xs: '100%', md: 'auto' } // Full width on small screens, auto on larger screens
-                            }}
-                            onClick={handleSubmit} // Changed to onClick to handle button click
-                        >
-                            Inscription
-                        </Button>
-                    </Stack>
-                    <Snackbar
-                        open={openSnackbar}
-                        autoHideDuration={6000}
-                        onClose={handleCloseSnackbar}
-                        message={message}
-                        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+            <form onSubmit={formik.handleSubmit} style={{ width: "100%" }}>
+                <Stack
+                    direction={{ xs: "column", md: "row" }}
+                    spacing={{ xs: 2, md: 0 }}
+                    alignItems="center"
+                    justifyContent="center"
+                    sx={{ width: "100%", maxWidth: 800 }}
+                >
+                    <InputBase
+                        sx={{
+                            backgroundColor: "background.paper",
+                            border: "1px solid",
+                            borderColor: "primary.main",
+                            borderRadius: { xs: "4px", md: "4px 0 0 4px" },
+                            width: "100%",
+                            height: 48,
+                            pl: 1,
+                        }}
+                        id="email"
+                        name="email"
+                        type="text"
+                        placeholder="Adresse mail"
+                        value={formik.values.email}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        error={formik.touched.email && Boolean(formik.errors.email)}
                     />
-                </Box>
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        size="large"
+                        sx={{
+                            borderRadius: { xs: "4px", md: "0 4px 4px 0" },
+                            height: 48,
+                            width: { xs: "100%", md: "auto" },
+                        }}
+                    >
+                        Inscription
+                    </Button>
+                </Stack>
+                {formik.touched.email && formik.errors.email && (
+                    <Box sx={{ color: "error.main", mt: 1, textAlign: "center" }}>
+                        {formik.errors.email}
+                    </Box>
+                )}
+                <Snackbar
+                    open={openSnackbar}
+                    autoHideDuration={6000}
+                    onClose={handleCloseSnackbar}
+                    anchorOrigin={{ vertical: "top", horizontal: "center" }}
+                >
+                    <Alert onClose={handleCloseSnackbar} severity={severity} sx={{ width: "100%" }}>
+                        {message}
+                    </Alert>
+                </Snackbar>
             </form>
         </Box>
     );
