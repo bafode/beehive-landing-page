@@ -38,7 +38,7 @@ const HomeNewsLetter: FC = () => {
                             <Grid item xs={12} md={4}>
                                 <Box sx={{ textAlign: 'center', maxWidth: { xs: '200px', md: '500px' }, margin: '0 auto' }}>
                                     <Image
-                                        src="/images/logo.png"
+                                        src="/images/beehive_logo.svg"
                                         layout="responsive"
                                         width={500}
                                         height={300}

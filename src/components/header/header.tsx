@@ -10,7 +10,7 @@ const Header: FC = () => {
     <AppBar position='static' sx={{ background: 'white' }}>
       <Container maxWidth="xl">
         <Box sx={{ display: 'flex' }}>
-          <Image src={'/images/logo.png'} width={170} height={90} alt='logo' />
+          <Image src={'/images/beehive_logo.svg'} width={170} height={90} alt='logo' />
         </Box>
       </Container>
     </AppBar>
