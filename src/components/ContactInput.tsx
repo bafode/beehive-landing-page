@@ -24,7 +24,7 @@ const ContactInput: FC = () => {
         onSubmit: async (values) => {
             try {
                 // Envoi de la requête POST
-                await axiosInstance.put(apiUrl, { email: values.email });
+                await axiosInstance.post(apiUrl, { email: values.email });
 
                 // Met à jour la donnée locale et invalide le cache
                 mutate(apiUrl);
@@ -89,6 +89,9 @@ const ContactInput: FC = () => {
                             borderRadius: { xs: "4px", md: "0 4px 4px 0" },
                             height: 48,
                             width: { xs: "100%", md: "auto" },
+                            '&:hover': {
+                                backgroundColor: 'primary.main', // Assurez-vous que la couleur de survol est la même que la couleur de base
+                            },
                         }}
                     >
                         Inscription
