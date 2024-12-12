@@ -11,7 +11,7 @@ const HomeDownload: FC = () => {
         <Box id="telecharger" sx={{
             backgroundColor: 'white', py: { xs: 2, md: 4 }, px: { xs: 2, md: 8 }
         }}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Card
                     color='primary.main'
                     sx={{

@@ -18,7 +18,7 @@ const Pricing: FC = () => {
             id='nos-offres'
             sx={{ backgroundColor: 'background.paper' }}
         >
-            <Container maxWidth='xl'>
+            <Container maxWidth='lg'>
                 <Box
                     sx={{
                         backgroundColor: 'background.paper',
@@ -26,7 +26,16 @@ const Pricing: FC = () => {
                         textAlign: 'center',
                         paddingBottom: { xs: 2, md: 4 },
                     }}>
-                    <Typography variant="h1" color={'primary.main'} sx={{ fontSize: 40, pb: '2rem' }}>
+                    <Typography
+                        textAlign="center"
+                        color="primary.main"
+                        variant="h1"
+                        sx={{
+                            fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
+                            fontWeight: 'bold',
+                            mb: 3,
+                        }}
+                    >
                         Découvre nos offres
                     </Typography>
                     {!isMobile && (

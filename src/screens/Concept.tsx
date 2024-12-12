@@ -1,10 +1,5 @@
-import React, { FC, useState } from 'react';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import { Concept } from '@/interfaces/concept';
-import { useMediaQuery } from '@mui/material';
+import React, { FC } from 'react';
+import { Box, Container, Typography, Grid, useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -16,58 +11,65 @@ const HomeOurConcept: FC = () => {
     const isMobile = useMediaQuery((theme: any) => theme.breakpoints.down('sm'));
 
     return (
-        <Box
-            px={{ xs: 2, md: 6 }}
-            id='concepts'
-            sx={{ backgroundColor: 'background.paper' }}
-        >
-            <Container maxWidth='xl'>
-                <Box
+        <Container maxWidth="lg">
+            <Box
+                id="concepts"
+                sx={{
+                    backgroundColor: 'background.paper',
+                    borderRadius: 10,
+                    textAlign: 'center',
+                    pb: { xs: 2, md: 4 },
+                }}
+            >
+                <Typography
+                    variant="h1"
                     sx={{
-                        backgroundColor: 'background.paper',
-                        borderRadius: 10,
-                        textAlign: 'center',
-                        paddingBottom: { xs: 2, md: 4 },
-                    }}>
-                    <Typography
-                        variant="h1"
-                        fontWeight={'bold'}
-                        color={'primary.main'}
-                        sx={{ fontSize: { xs: 30, md: 40 }, pb: '1.5rem' }}
+                        fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
+                        fontWeight: 'bold',
+                        color: 'primary.main',
+                        mb: 3,
+                    }}
+                >
+                    Notre Concept
+                </Typography>
+
+                {/* Affichage adaptatif */}
+                {isMobile ? (
+                    <Swiper
+                        pagination={{ clickable: true }}
+                        modules={[Pagination]}
+                        spaceBetween={20}
+                        style={{ paddingBottom: '2rem' }}
                     >
-                        Notre Concept
-                    </Typography>
-
-                    {/* Affichage en grille pour les écrans non mobiles */}
-                    {!isMobile && (
-                        <Grid container spacing={0} maxWidth="xl" justifyContent="space-between">
-                            {conceptData.map((item: Concept) => (
-                                <Grid key={item.id} item xs={12} sm={6} md={4} lg={3}>
-                                    <ConceptCard key={item.id} item={item} />
-                                </Grid>
-                            ))}
-                        </Grid>
-                    )}
-
-                    {/* Affichage du carrousel uniquement pour les écrans mobiles */}
-                    {isMobile && (
-                        <Swiper
-                            pagination={{ clickable: true }}
-                            modules={[Pagination]}
-                            spaceBetween={20}
-                            className="mySwiper"
-                            style={{ paddingBottom: '2rem' }}
-                        >
-                            {conceptData.map((item: Concept) => (
-                                <SwiperSlide key={item.id}>
-                                    <ConceptCard key={item.id} item={item} />
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    )}
-                </Box>
-            </Container>
-        </Box>
+                        {conceptData.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <ConceptCard item={item} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                ) : (
+                    <Grid
+                        container
+                        spacing={3}
+                        justifyContent="center" // Centre les éléments horizontalement
+                    >
+                        {conceptData.map((item) => (
+                            <Grid
+                                key={item.id}
+                                item
+                                xs={12}
+                                sm={6}
+                                md={4}
+                                display="flex" // Assure un centrage vertical
+                                justifyContent="center" // Centre les cartes horizontalement
+                            >
+                                <ConceptCard item={item} />
+                            </Grid>
+                        ))}
+                    </Grid>
+                )}
+            </Box>
+        </Container>
     );
 };
 
