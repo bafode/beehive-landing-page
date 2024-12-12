@@ -63,6 +63,7 @@ const HomeHero: FC = () => (
                         </Typography>
                         <Button
                             variant="contained"
+
                             sx={(theme) => ({
                                 backgroundColor: 'secondary.main',
                                 color: 'black',
@@ -70,6 +71,9 @@ const HomeHero: FC = () => (
                                     xs: '0.6rem',  // Taille pour petits écrans
                                     sm: '0.8rem', // Taille pour écrans moyens
                                     md: '1rem', // Taille pour grands écrans
+                                },
+                                '&:hover': {
+                                    backgroundColor: 'secondary.main', // Assurez-vous que la couleur de survol est la même que la couleur de base
                                 },
                             })}
                         >

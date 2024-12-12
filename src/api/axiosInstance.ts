@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an Axios instance
 const axiosInstance = axios.create({
-    baseURL: 'https://red-start-reseaux-api.onrender.com/api'
+    baseURL: 'http://185.98.139.242:4000/v1'
 });
 
 // Request interceptor

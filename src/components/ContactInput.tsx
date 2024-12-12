@@ -15,7 +15,7 @@ const ContactInput: FC = () => {
     const [message, setMessage] = useState("");
     const [severity, setSeverity] = useState<"success" | "error">("success");
 
-    const apiUrl = "http://185.98.139.242:4000/v1/landing-contacts"; // Remplacez par votre point d'API
+    const apiUrl = "/landing-contacts"; // Remplacez par votre point d'API
 
     // Gestion du formulaire avec Formik
     const formik = useFormik({
@@ -23,8 +23,9 @@ const ContactInput: FC = () => {
         validationSchema: validationSchema,
         onSubmit: async (values) => {
             try {
+
                 // Envoi de la requête POST
-                await axiosInstance.put(apiUrl, { email: values.email });
+                await axiosInstance.post(apiUrl, { email: values.email });
 
                 // Met à jour la donnée locale et invalide le cache
                 mutate(apiUrl);
@@ -89,6 +90,9 @@ const ContactInput: FC = () => {
                             borderRadius: { xs: "4px", md: "0 4px 4px 0" },
                             height: 48,
                             width: { xs: "100%", md: "auto" },
+                            '&:hover': {
+                                backgroundColor: 'primary.main', // Assurez-vous que la couleur de survol est la même que la couleur de base
+                            },
                         }}
                     >
                         Inscription
