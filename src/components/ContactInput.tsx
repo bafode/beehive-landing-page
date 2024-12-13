@@ -15,7 +15,7 @@ const ContactInput: FC = () => {
     const [message, setMessage] = useState("");
     const [severity, setSeverity] = useState<"success" | "error">("success");
 
-    const apiUrl = "http://185.98.139.242:4000/v1/landing-contacts"; // Remplacez par votre point d'API
+    const apiUrl = "/landing-contacts"; // Remplacez par votre point d'API
 
     // Gestion du formulaire avec Formik
     const formik = useFormik({
@@ -23,6 +23,7 @@ const ContactInput: FC = () => {
         validationSchema: validationSchema,
         onSubmit: async (values) => {
             try {
+
                 // Envoi de la requête POST
                 await axiosInstance.post(apiUrl, { email: values.email });
 
