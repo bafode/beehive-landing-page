@@ -2,51 +2,65 @@
   "name": "beehive-landing-page",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
   "dependencies": {
-    "@emotion/cache": "^11.7.1",
-    "@emotion/react": "^11.9.0",
-    "@emotion/server": "^11.4.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/icons-material": "^5.6.2",
-    "@mui/material": "^5.6.2",
+    "@emailjs/browser": "^3.11.0",
+    "@emailjs/nodejs": "^2.2.0",
+    "@hookform/resolvers": "^3.6.0",
+    "@tanstack/react-query": "^5.61.5",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
     "axios": "^1.7.2",
-    "formik": "^2.4.6",
-    "next": "12.1.5",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-id-swiper": "^4.0.0",
-    "react-lazy-load-image-component": "^1.6.0",
-    "react-scroll": "^1.8.7",
-    "react-simple-typewriter": "^5.0.1",
+    "bootstrap": "^5.3.3",
+    "firebase": "^10.7.1",
+    "html-react-parser": "^4.2.0",
+    "i18next": "^23.7.8",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.7",
+    "react-dom": "^18.2.0",
+    "react-fullscreen-loading": "^0.0.4",
+    "react-hook-form": "^7.52.0",
+    "react-i18next": "^13.5.0",
+    "react-icons": "^5.4.0",
+    "react-responsive": "^10.0.0",
+    "react-router-dom": "^6.14.2",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
-    "react-type-animation": "^3.2.0",
+    "react-toastify": "^10.0.5",
+    "react-type-animation": "^3.1.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.1.14",
     "swr": "^2.2.5",
+    "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "@types/node": "17.0.25",
-    "@types/react": "18.0.6",
-    "@types/react-dom": "18.0.2",
-    "@types/react-lazy-load-image-component": "^1.6.4",
-    "@types/react-scroll": "^1.8.3",
-    "@types/react-slick": "^0.23.8",
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "@typescript-eslint/parser": "^5.20.0",
-    "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^2.7.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.6.2",
-    "typescript": "4.6.3"
+    "@iconify/react": "^4.1.1",
+    "sass": "^1.64.1"
   }
 }
