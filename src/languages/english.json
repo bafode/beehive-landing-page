@@ -1,0 +1,185 @@
+{
+  "header": [
+    {
+      "title": "HOME",
+      "url": "home"
+    },
+    {
+      "title": "CONCEPT",
+      "url": "about"
+    },
+    {
+      "title": "UNDERSTAND",
+      "url": "comprendre"
+    },
+    {
+      "title": "OFFERS",
+      "url": "offres"
+    },
+    {
+      "title": "CONTACT",
+      "url": "contactus"
+    }
+  ],
+  "hero": {
+    "heading": "Join the Hive!",
+    "textAnim1": "Sign up now",
+    "textAnim2": "Join your Student Community",
+    "description": "Creativity, collaboration, knowledge:<br/>BeeHive, your student community.",
+    "btnText": "Sign up",
+    "btnUrl": "contactus"
+  },
+  "concept": {
+    "title": "Our Concept",
+    "concepts": [
+      {
+        "id": 1,
+        "title": "OUR STORY",
+        "description": "Let us take you on a journey through our story. Like you, creative students, facing the same challenges: sharing our ideas, getting feedback, collaborating in real-time... We felt those struggles and created BeeHive, a solution for our community. Every challenge is an opportunity to grow."
+      },
+      {
+        "id": 2,
+        "title": "OUR SOLUTION",
+        "description": "BeeHive: sharing, collaboration, creativity. A dynamic community fostering interaction and personal development for students. Together, we spark creativity and promote learning!"
+      },
+      {
+        "id": 3,
+        "title": "YOUR SECURITY",
+        "description": "We understand how crucial security and reliability are for you. That's why BeeHive ensures complete confidentiality of your data on a secure platform. Your creativity deserves the best environment to thrive."
+      }
+    ],
+    "btnText": "Sign up",
+    "btnUrl": "contactus"
+  },
+  "comprendre": {
+    "title": "Understanding BeeHive"
+  },
+  "offres": {
+    "title": "Discover our offers",
+    "plans": [
+      {
+        "title": "Free",
+        "features": [
+          "Chat in pairs or groups of 3",
+          "Access to Inspiration and Community Posts",
+          "Post Creation",
+          "Pin up to 50 posts",
+          "Standard Visibility"
+        ],
+        "buttonStyle": "outline-primary",
+        "buttonText": "Contact us",
+        "backgroundColor": "white",
+        "textColor": "primary"
+      },
+      {
+        "title": "Premium",
+        "features": [
+          "Group chat with up to 10 people",
+          "Priority Access to Updates",
+          "Custom Analytics",
+          "Unlimited Post Pinning",
+          "Badges and Rewards",
+          "Priority Support",
+          "Advanced Customization Options",
+          "Priority Visibility"
+        ],
+        "buttonStyle": "light",
+        "buttonText": "Contact us",
+        "backgroundColor": "#5e17eb",
+        "textColor": "white",
+        "iconColor": "warning"
+      }
+    ]
+  },
+  "contact": {
+    "imageUrl": "/images/beehive_logo.svg",
+    "sectionHeading": {
+      "title": "Be the First to Know!",
+      "subTitle1": "Sign up now with your email address to get notified when BeeHive launches.",
+      "subTitle2": "Don’t miss the opportunity to join our student community from day one!"
+    },
+    "form": {
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Enter your Last Name",
+        "error": "Please enter your last name"
+      },
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "Enter your First Name",
+        "error": "Please enter your first name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your Email",
+        "invalidError": "Invalid email",
+        "error": "Please enter a valid email address"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Enter a Subject",
+        "error": "Please enter a subject"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Enter your Message",
+        "error": "Please enter a message"
+      },
+      "term": {
+        "label1": "I accept the ",
+        "label2": "terms and conditions",
+        "error": "Please accept the terms and conditions"
+      },
+      "btn": {
+        "text": "Send",
+        "loading": "Sending..."
+      }
+    },
+    "contactInfo": {
+      "title1": "Email",
+      "value1": "beehivecontact@gmail.com",
+      "title2": "Phone",
+      "value2": "+33 7 74 88 64 77"
+    }
+  },
+  "footer": {
+    "email": {
+      "title": "Email",
+      "value": "beehivecontact@gmail.com"
+    },
+    "phone": {
+      "title": "Phone",
+      "value": "+33 7 74 88 64 77"
+    },
+    "about": {
+      "title": "Need help?",
+      "items": [
+        {
+          "title": "Contact Us",
+          "url": "https://play.google.com/store/apps/details?id=com.beehive"
+        },
+        {
+          "title": "Help Center",
+          "url": "https://apps.apple.com/us/app/beehive/id1234567890"
+        },
+        {
+          "title": "Terms and Privacy Policy",
+          "url": "https://apps.apple.com/us/app/beehive/id1234567890"
+        }
+      ]
+    },
+    "platforms": {
+      "title": "Use Beehive",
+      "items": [
+        {
+          "title": "Android",
+          "url": "https://play.google.com/store/apps/details?id=com.beehive"
+        },
+        {
+          "title": "iOS",
+          "url": "https://apps.apple.com/us/app/beehive/id1234567890"
+        }
+      ]
+    }
+  }
+}
