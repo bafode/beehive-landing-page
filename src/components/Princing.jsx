@@ -16,16 +16,15 @@ const Pricing = () => {
         {/* Titre */}
         <Row className="text-center mb-5">
           <Col>
-            <h2
+            <h1
               style={{
-                color: "#5e17eb", // Nouvelle couleur
-                fontSize: "2.5rem",
+                color: "#5e17eb", 
                 fontWeight: "700",
                 textTransform: "uppercase",
               }}
             >
               {offres.title}
-            </h2>
+            </h1>
           </Col>
         </Row>
 

@@ -11,18 +11,14 @@ const Comprendre = () => {
         {/* Titre */}
         <Row className="text-center mb-4">
           <Col>
-            <h2
+            <h1
               style={{
                 color: "#5e17eb",
-                fontSize: "2.8rem",
-                fontWeight: "700",
-                letterSpacing: "1px",
                 textTransform: "uppercase",
-                marginBottom: "2rem",
               }}
             >
               {comprendre.title}
-            </h2>
+            </h1>
           </Col>
         </Row>
 

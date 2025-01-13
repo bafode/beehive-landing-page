@@ -18,16 +18,14 @@ export default function About() {
               data-aos-delay="400"
             >
               <div className="section-heading mb-5">
-                <h2
+                <h1
                   style={{
-                    fontSize: "2.8rem",
-                    fontWeight: "700",
                     letterSpacing: "1px",
                     color: "#5e17eb",
                   }}
                 >
                   {concept.title}
-                </h2>
+                </h1>
               </div>
 
               {/* Affichage adaptatif */}
