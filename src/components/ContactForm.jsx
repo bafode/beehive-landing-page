@@ -36,7 +36,12 @@ export default function ContactForm() {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      await axiosInstance.post("/message", data);
+      await axiosInstance.post("/landing-contacts", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log("Message sent:", data);
       toast.success("Message envoyé avec succès!");
       reset();
     } catch (error) {
