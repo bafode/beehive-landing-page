@@ -14,15 +14,14 @@ const Footer = () => {
       <Container>
         {/* Logo et Contact */}
         <Row className="mb-4">
-          <Col xs={12} md={4} className="text-center text-md-start">
+          <Col xs={12} md={4} className="text-center text-md-start mb-3">
             <img
               src="/images/beehive_logo.svg"
               alt="Beehive Logo"
               style={{ width: "150px", marginBottom: "1rem" }}
             />
-            <div className="d-flex align-items-center mb-2">
+           
               <ContactInfo />
-            </div>
             {/* Réseaux sociaux */}
             <div className="d-flex gap-3 justify-content-center justify-content-md-start">
               <IconLink
