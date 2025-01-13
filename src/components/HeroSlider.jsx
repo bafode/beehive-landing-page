@@ -85,9 +85,9 @@ const styles = {
     transform: "translateX(50%)",
   },
   image: {
-    width: isMobile ? "90%" : "300px", // 80% pour le mobile
-    maxWidth: isMobile ? "none" : "300px", // Supprimer maxWidth pour mobile
-    height: "340px", // Hauteur proportionnelle sur mobile
+    width: isMobile ? "100%" : "300px", // 80% pour le mobile
+    maxWidth: isMobile ? "200px" : "300px", // Supprimer maxWidth pour mobile
+    height: isMobile ? "250px" : "330px", // Hauteur proportionnelle sur mobile
     objectFit: "contain",
     transition: "all 0.5s ease",
   },
