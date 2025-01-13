@@ -197,7 +197,7 @@ a {
         font-size: 45px;
       }
       @include down-sm {
-        font-size: 38px;
+        font-size: 35px;
       }
     }
 
@@ -293,6 +293,19 @@ a {
       color: var(--px-body-text);
     }
   }
+
+   h1 {
+      color: var(--px-heading-hero);
+      font-weight: 700;
+      font-size: 50px;
+      text-transform: uppercase;
+      @include down-lg {
+        font-size: 45px;
+      }
+      @include down-sm {
+        font-size: 35px;
+      }
+    }
 
   .review-box {
     display: flex;
