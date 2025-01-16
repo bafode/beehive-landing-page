@@ -211,10 +211,12 @@ a {
       //text-transform: uppercase;
       @include down-lg {
         font-size: 35px;
+        font-weight: 400;
         line-height: 40.26px;
       }
       @include down-sm {
-        font-size: 25px;
+        font-weight: 300;
+        font-size: 30px;
         line-height: 30px;
       }
     }
@@ -228,7 +230,7 @@ a {
         font-size: 20px;
       }
       @include down-sm {
-        font-size: 14px;
+        font-size: 15px;
       
       }
     }
