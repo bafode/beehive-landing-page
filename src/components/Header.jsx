@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import LanguageDropdownWithFlags from "./SwitchLanguage";
 import { useTranslation } from "react-i18next";
+import LanguageDropdown from "./LanguageDropDown";
 
 export default function Header() {
   const [mobileToggle, setMobileToggle] = useState(false);
@@ -65,7 +65,7 @@ export default function Header() {
               </li>
             );
           })}
-          <LanguageDropdownWithFlags />
+          <LanguageDropdown />
         </ul>
         {/* Top Menu */}
         <div className="d-flex">

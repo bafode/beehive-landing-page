@@ -3,7 +3,7 @@ import * as constants from "../constants";
 import { useTranslation } from "react-i18next";
 import { Button, Dropdown } from 'react-bootstrap';
 
-const LanguageDropdownWithFlags = () => {
+const LanguageDropdown= () => {
     const { i18n } = useTranslation();
 
     const [selectedLanguage, setSelectedLanguage] = useState(() => {
@@ -27,12 +27,20 @@ const LanguageDropdownWithFlags = () => {
 
     return (
         <Dropdown>
-            <Dropdown.Toggle as={Button} variant="outline-primary">
+            <Dropdown.Toggle
+                as={Button}
+                variant="outline-primary"
+                size="sm"  // Réduit la taille du bouton
+                style={{
+                    fontSize: '14px', 
+                    padding: '5px 10px',  // Ajuste les espacements internes pour réduire la taille
+                    height: '30px'  // Réduit la hauteur du bouton
+                }}
+            >
                 <img
                     src={selectedLanguage.icon}
                     alt={`${selectedLanguage.title} Flag`}
-                    className="flag-icon"
-                    style={{ width: '20px', marginRight: '8px' }}
+                    style={{ width: '18px', marginRight: '6px' }}  
                 />
                 {selectedLanguage.key}
             </Dropdown.Toggle>
@@ -58,4 +66,4 @@ const LanguageDropdownWithFlags = () => {
     );
 };
 
-export default LanguageDropdownWithFlags;
+export default LanguageDropdown;
