@@ -123,18 +123,6 @@
           "general_feedback": "Commentaires généraux",
           "suggestions": "Suggestions d'amélioration",
           "beta_tester": "Devenir testeur bêta",
-          "login_issues": "Problèmes de connexion",
-          "technical_issues": "Difficultés techniques",
-          "report_abuse": "Signalement d'abus",
-          "report_content": "Signalement de contenu",
-          "privacy_concerns": "Problèmes de confidentialité",
-          "moderation_issues": "Problèmes de modération",
-          "advertising": "Publicité et partenariat",
-          "subscriptions": "Questions sur les abonnements",
-          "account_deletion": "Suppression de compte",
-          "account_recovery": "Récupération de compte",
-          "feature_specific": "Problèmes avec une fonctionnalité spécifique",
-          "media_issues": "Problèmes avec les contenus multimédias",
           "other": "Autre"
         }
       },
