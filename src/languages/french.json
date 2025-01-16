@@ -117,8 +117,26 @@
       },
       "subject": {
         "label": "Sujet",
-        "placeholder": "Entrez un Sujet",
-        "error": "Veuillez saisir un sujet"
+        "placeholder": "Sélectionnez un sujet",
+        "error": "Veuillez sélectionner un sujet",
+        "options": {
+          "general_feedback": "Commentaires généraux",
+          "suggestions": "Suggestions d'amélioration",
+          "beta_tester": "Devenir testeur bêta",
+          "login_issues": "Problèmes de connexion",
+          "technical_issues": "Difficultés techniques",
+          "report_abuse": "Signalement d'abus",
+          "report_content": "Signalement de contenu",
+          "privacy_concerns": "Problèmes de confidentialité",
+          "moderation_issues": "Problèmes de modération",
+          "advertising": "Publicité et partenariat",
+          "subscriptions": "Questions sur les abonnements",
+          "account_deletion": "Suppression de compte",
+          "account_recovery": "Récupération de compte",
+          "feature_specific": "Problèmes avec une fonctionnalité spécifique",
+          "media_issues": "Problèmes avec les contenus multimédias",
+          "other": "Autre"
+        }
       },
       "message": {
         "label": "Message",
@@ -151,33 +169,33 @@
       "title": "Téléphone",
       "value": "+33 7 74 88 64 77"
     },
-    "about":{
-      "title":"Besoin d'aide ?",
-      "items":[
+    "about": {
+      "title": "Besoin d'aide ?",
+      "items": [
         {
-          "title":"Nous Contacter",
-          "url":"https://play.google.com/store/apps/details?id=com.beehive"
+          "title": "Nous Contacter",
+          "url": "https://play.google.com/store/apps/details?id=com.beehive"
         },
         {
-          "title":"Centre d'aide",
-          "url":"https://apps.apple.com/us/app/beehive/id1234567890"
+          "title": "Centre d'aide",
+          "url": "https://apps.apple.com/us/app/beehive/id1234567890"
         },
         {
-          "title":"Conditions et politique de Confidentialité",
-          "url":"https://apps.apple.com/us/app/beehive/id1234567890"
+          "title": "Conditions et politique de Confidentialité",
+          "url": "https://apps.apple.com/us/app/beehive/id1234567890"
         }
       ]
     },
-    "platforms":{
-      "title":"Utiliser Beehive",
-      "items":[
+    "platforms": {
+      "title": "Utiliser Beehive",
+      "items": [
         {
-          "title":"Android",
-          "url":"https://play.google.com/store/apps/details?id=com.beehive"
+          "title": "Android",
+          "url": "https://play.google.com/store/apps/details?id=com.beehive"
         },
         {
-          "title":"iOS",
-          "url":"https://apps.apple.com/us/app/beehive/id1234567890"
+          "title": "iOS",
+          "url": "https://apps.apple.com/us/app/beehive/id1234567890"
         }
       ]
     }

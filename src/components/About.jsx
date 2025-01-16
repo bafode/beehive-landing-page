@@ -18,12 +18,7 @@ export default function About() {
               data-aos-delay="400"
             >
               <div className="section-heading mb-5">
-                <h1
-                  style={{
-                    letterSpacing: "1px",
-                    color: "#5e17eb",
-                  }}
-                >
+                <h1>
                   {concept.title}
                 </h1>
               </div>
@@ -83,19 +78,12 @@ const ConceptCard = ({ item }) => (
   >
     <Card.Body>
       <Card.Title
-        className="text-start"
-        style={{
-          fontSize: "1.8rem",
-          fontWeight: "bold",
-          color: "#5e17eb",
-          textTransform: "uppercase",
-          letterSpacing: "0.5px",
-        }}
+        className="about-card card-heading"
       >
         {item.title}
       </Card.Title>
 
-      <hr style={{ borderTop: "3px solid #1976d2" }} />
+      <hr style={{ borderTop: "3px solid #5e17eb" }} />
 
       <Card.Text
         className="mt-2 text-start"

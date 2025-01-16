@@ -1,15 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {
-    auth,
-    // provider
-} from "../db-config/firebase";
-// import {signInWithPopup} from "firebase/auth"
+
 import {useNavigate, Navigate} from "react-router-dom";
-import {signInWithEmailAndPassword} from "firebase/auth";
 
 const Auth = () => {
-
-    const navigate = useNavigate()
 
     const [email, setEmail] = useState("")
 
@@ -32,16 +25,6 @@ const Auth = () => {
         event.preventDefault()
         if (!formData.email || !formData.password) return alert("Entre votre email et mots de passe")
         setLoading(true)
-        signInWithEmailAndPassword(auth, formData.email, formData.password).then(data => {
-            if (data) {
-                localStorage.setItem("email", data?.user?.email)
-                navigate("/admin")
-            }
-            setLoading(false)
-        }).catch(e => {
-            alert(e.message)
-            console.log(e)
-        })
     }
 
     useEffect(() => {

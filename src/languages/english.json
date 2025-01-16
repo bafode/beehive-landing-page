@@ -117,8 +117,26 @@
       },
       "subject": {
         "label": "Subject",
-        "placeholder": "Enter a Subject",
-        "error": "Please enter a subject"
+        "placeholder": "Select a subject",
+        "error": "Please Select a subject",
+        "options": {
+          "suggestions": "Suggestions for improvement",
+          "general_feedback": "General feedback",
+          "beta_tester": "Become a beta tester",
+          "login_issues": "Login issues",
+          "technical_issues": "Technical difficulties",
+          "report_abuse": "Report abuse",
+          "moderation_issues": "Moderation issues",
+          "report_content": "Report content",
+          "privacy_concerns": "Privacy concerns",
+          "advertising": "Advertising and partnership",
+          "subscriptions": "Questions about subscriptions",
+          "account_deletion": "Account deletion",
+          "account_recovery": "Account recovery",
+          "feature_specific": "Issues with a specific feature",
+          "media_issues": "Issues with multimedia content",
+          "other": "Other"
+        }
       },
       "message": {
         "label": "Message",

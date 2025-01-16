@@ -26,11 +26,11 @@ export default function Contact() {
                 data-aos-duration="1200"
                 data-aos-delay="200"
               >
-                <h5>{contact.sectionHeading.title}</h5>
-                <p className="m-0">
+                <h1>{contact.sectionHeading.title}</h1>
+                <h5 >
                   {contact.sectionHeading.subTitle1} <br />{" "}
                   {contact.sectionHeading.subTitle2}
-                </p>
+                </h5>
               </div>
             </div>
           </div>
