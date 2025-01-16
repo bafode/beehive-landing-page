@@ -51,7 +51,7 @@ export default function ContactForm() {
       setLoading(false);
     }
   };
-
+   const options = t("contact.form.subject.options", { returnObjects: true });
   return (
     <>
       <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
@@ -90,7 +90,7 @@ export default function ContactForm() {
                 render={({ field }) => (
                   <input
                     {...field}
-                    placeholder={form.firstName.placeholder}
+                    placeholder={form.lastName.placeholder}
                     className={`form-control ${
                       errors.lastName ? "is-invalid" : ""
                     }`}
@@ -135,13 +135,21 @@ export default function ContactForm() {
                 control={control}
                 defaultValue=""
                 render={({ field }) => (
-                  <input
+                  <select
                     {...field}
-                    placeholder={form.subject.placeholder}
                     className={`form-control ${
                       errors.subject ? "is-invalid" : ""
                     }`}
-                  />
+                  >
+                    <option  value="" disabled>
+                      {form.subject.placeholder}
+                    </option>
+                    {Object.entries(options).map(([value, label]) => (
+                      <option key={value} value={value}>
+                        {label}
+                      </option>
+                    ))}
+                  </select>
                 )}
               />
               {errors.subject && (
@@ -149,6 +157,7 @@ export default function ContactForm() {
               )}
             </div>
           </div>
+
           <div className="col-md-12">
             <div className="form-group">
               <label className="form-label">{form.message.label}</label>

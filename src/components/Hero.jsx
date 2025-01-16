@@ -20,7 +20,7 @@ export default function Hero() {
 
   return (
     <section
-      className="home-section"
+      className="section home-section"
       id="home"
       data-scroll-index={0}
       style={{
@@ -45,7 +45,7 @@ export default function Hero() {
       >
         <div className="container" style={{ padding: "24px" }}>
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-7">
               <div className="hs-text-box">
                 <h1>{heading}</h1>
                 <h3 style={{ minHeight: 120 }}>
@@ -57,9 +57,9 @@ export default function Hero() {
                     repeat={Infinity}
                   />
                 </h3>
-                <div>
+                <h4 >
                   <div dangerouslySetInnerHTML={{ __html: description }} />
-                </div>
+                </h4>
                 <div className="btn-bar d-flex align-items-sm-center flex-column flex-sm-row">
                   <ScrollLink
                     to={btnUrl}
@@ -75,7 +75,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-5">
               <HeroSlider />
             </div>
           </div>

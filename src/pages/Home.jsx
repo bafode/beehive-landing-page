@@ -5,6 +5,7 @@ import Contact from '../components/Contact';
 import Loading from "react-fullscreen-loading";
 import Comprendre from '../components/Comprendre';
 import Pricing from '../components/Princing';
+import { Container } from 'react-bootstrap';
 
 
 
@@ -30,11 +31,11 @@ export default function Home() {
         );
     }
 
-    return (<>
+    return (<Container>
         <Hero/>
         <About />
         <Comprendre />
         <Pricing/>
         <Contact/>
-    </>);
+    </Container>);
 }

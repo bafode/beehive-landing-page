@@ -1,57 +1,61 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import * as constants from "../constants";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { Button, Dropdown } from 'react-bootstrap';
 
 const LanguageDropdownWithFlags = () => {
-    const {i18n} = useTranslation();
+    const { i18n } = useTranslation();
 
     const [selectedLanguage, setSelectedLanguage] = useState(() => {
-        const langKey = localStorage.getItem("langKey")
-        const language = constants.languages.find(item => item.key === langKey)
+        const langKey = localStorage.getItem("langKey");
+        const language = constants.languages.find(item => item.key === langKey);
         if (!language?.key) {
             return {
                 title: 'Français',
                 key: "fr",
                 icon: "/images/french.png"
-            }
+            };
         }
-        return language
+        return language;
     });
-    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const handleLanguageChange = async (lang) => {
-        await i18n.changeLanguage(lang.key)
-        localStorage.setItem("langKey", lang.key)
+        await i18n.changeLanguage(lang.key);
+        localStorage.setItem("langKey", lang.key);
         setSelectedLanguage(lang);
-        setDropdownOpen(false); // Close the dropdown after language selection
-        // Implement logic to change the language
-    };
-
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen); // Toggle dropdown visibility
     };
 
     return (
-        <div className="language-dropdown">
-            <div className="selected-language" onClick={toggleDropdown}>
-                <img src={selectedLanguage.icon} alt="English Flag" className="flag-icon"/>
-                {selectedLanguage.title}
-            </div>
-            {dropdownOpen && (
-                <>
-                    <div className="language-options">
-                        {constants.languages.map(lang => (
-                            <div key={lang} onClick={() => handleLanguageChange(lang)} className="lang-item">
-                                <img src={lang.icon} alt="English Flag" className="flag-icon"/>
-                                {lang.title}
-                            </div>
-                        ))}
-                    </div>
+        <Dropdown>
+            <Dropdown.Toggle as={Button} variant="outline-primary">
+                <img
+                    src={selectedLanguage.icon}
+                    alt={`${selectedLanguage.title} Flag`}
+                    className="flag-icon"
+                    style={{ width: '20px', marginRight: '8px' }}
+                />
+                {selectedLanguage.key}
+            </Dropdown.Toggle>
 
-                </>
-            )}
-        </div>
+            <Dropdown.Menu>
+                {constants.languages.map(lang => (
+                    <Dropdown.Item
+                        key={lang.key}
+                        onClick={() => handleLanguageChange(lang)}
+                        style={{ display: 'flex', alignItems: 'center' }}
+                    >
+                        <img
+                            src={lang.icon}
+                            alt={`${lang.title} Flag`}
+                            className="flag-icon"
+                            style={{ width: '20px', marginRight: '8px' }}
+                        />
+                        {lang.title}
+                    </Dropdown.Item>
+                ))}
+            </Dropdown.Menu>
+        </Dropdown>
     );
 };
 
-export default LanguageDropdownWithFlags
+export default LanguageDropdownWithFlags;
