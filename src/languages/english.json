@@ -59,6 +59,7 @@
     "plans": [
       {
         "title": "Free",
+        "price": "0€/Month",
         "features": [
           "Chat in pairs or groups of 3",
           "Access to Inspiration and Community Posts",
@@ -73,6 +74,7 @@
       },
       {
         "title": "Premium",
+        "price": "10€/Month",
         "features": [
           "Group chat with up to 10 people",
           "Priority Access to Updates",
