@@ -51,6 +51,11 @@ const Pricing = () => {
                     >
                       {plan.title}
                     </h3>
+                    <h4
+                      className={`text-${plan.textColor} text-center mb-4`}
+                    >
+                      {plan.price}
+                    </h4>
                     <ul className="list-unstyled">
                       {plan.features.map((feature, i) => (
                         <li key={i} className="d-flex align-items-center mb-3">
@@ -99,6 +104,11 @@ const Pricing = () => {
                     >
                       {plan.title}
                     </h3>
+                    <h4
+                      className={`text-${plan.textColor} text-center mb-4`}
+                    >
+                      {plan.price}
+                    </h4>
                     <ul className="list-unstyled">
                       {plan.features.map((feature, i) => (
                         <li key={i} className="d-flex align-items-center mb-3">

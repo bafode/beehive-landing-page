@@ -59,6 +59,7 @@
     "plans": [
       {
         "title": "Gratuit",
+        "price": "0€/Mois",
         "features": [
           "Chat en duo ou en groupe de 3",
           "Accès aux Posts Inspiration et Communauté",
@@ -73,6 +74,7 @@
       },
       {
         "title": "Premium",
+        "price": "10€/Mois",
         "features": [
           "Chat en groupe jusqu'à 10 personnes",
           "Accès Prioritaire aux Nouveautés",
