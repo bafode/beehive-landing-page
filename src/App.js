@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import {useEffect} from 'react';
 import TermsAndConditions from './pages/Conditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Contact from './components/Contact';
 
 function App() {
     useEffect(() => {
@@ -17,8 +18,8 @@ function App() {
         <Routes>
             <Route path="/" element={<Layout/>}>
                 <Route index element={<Home />} />
-               
             </Route>
+                <Route path="contact" element={<Contact />} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="terms-and-conditions" element={<TermsAndConditions />} />
         </Routes>
