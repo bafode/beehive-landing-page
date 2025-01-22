@@ -141,7 +141,7 @@ export default function ContactForm() {
                       errors.subject ? "is-invalid" : ""
                     }`}
                   >
-                    <option  value="" disabled>
+                    <option value="" disabled>
                       {form.subject.placeholder}
                     </option>
                     {Object.entries(options).map(([value, label]) => (
@@ -198,10 +198,10 @@ export default function ContactForm() {
                   />
                 )}
               />
-              <label className="form-label" htmlFor="term-condation">
+              <label className="form-label" htmlFor="privacy-policy">
                 {form.term.label1}{" "}
                 <a
-                  href="/term-condition"
+                  href="/privacy-policy"
                   target="_blank"
                   style={{ color: "#5e17eb" }}
                 >

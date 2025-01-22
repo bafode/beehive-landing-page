@@ -1,166 +1,205 @@
 import React from "react";
+import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
 
 const TermsAndConditions = () => {
+  const styles = {
+    container: {
+      marginTop: "50px",
+      padding: "20px",
+      backgroundColor: "#f9f9fb",
+      borderRadius: "12px",
+      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+    },
+    title: {
+      color: "#5e17eb",
+      marginBottom: "1rem",
+      textAlign: "center",
+      fontWeight: "bold",
+    },
+    sectionTitle: {
+      color: "#343a40",
+      marginTop: "30px",
+      fontWeight: "bold",
+      fontSize: "1.8rem",
+    },
+    subSectionTitle: {
+      color: "#555",
+      marginTop: "15px",
+      fontWeight: "600",
+    },
+    paragraph: {
+      fontSize: "1rem",
+      lineHeight: "1.8",
+      color: "#555",
+      textAlign: "justify",
+    },
+    listItem: {
+      marginBottom: "10px",
+      backgroundColor: "#fff",
+      border: "1px solid #ddd",
+      borderRadius: "6px",
+      padding: "10px",
+    },
+    emailLink: {
+      color: "#5e17eb",
+      fontWeight: "bold",
+    },
+    card: {
+      marginTop: "30px",
+      padding: "15px",
+      border: "none",
+      borderRadius: "10px",
+      boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
+    },
+    highlight: {
+      fontWeight: "bold",
+      color: "#5e17eb",
+    },
+  };
+
   return (
-    <div className="container mt-5 py-5">
-      <h3 className="mt-5">Conditions Générales d'Utilisation</h3>
+    <Container style={styles.container}>
+      <Row>
+        <Col>
+          <h3
+            style={styles.title}
+            className="display-6 display-md-4 display-lg-3 text-center"
+          >
+            Conditions Générales d'Utilisation
+          </h3>
 
-      <section className="mt-4">
-        <h4>1. Objet</h4>
-        <p>
-          Les présentes Conditions Générales d'Utilisation (ci-après les "CGU")
-          ont pour objet de définir les conditions dans lesquelles les
-          utilisateurs (ci-après les "Utilisateurs") accèdent et utilisent les
-          services proposés par <strong>Beehive</strong>
-          (ci-après les "Services"). En accédant ou en utilisant les Services,
-          l’Utilisateur accepte sans réserve les présentes CGU.
-        </p>
-      </section>
+          {/* Section 1 */}
+          <section>
+            <h4 style={styles.sectionTitle}>1. Objet</h4>
+            <p style={styles.paragraph}>
+              Les présentes Conditions Générales d'Utilisation (ci-après les{" "}
+              <span style={styles.highlight}> "CGU"</span>) définissent les
+              règles encadrant l’utilisation de l'application{" "}
+              <span style={styles.highlight}>Beehive</span>, une plateforme
+              sociale dédiée aux étudiants. En accédant aux services, les
+              utilisateurs acceptent de respecter pleinement ces CGU.
+            </p>
+          </section>
 
-      <section className="mt-4">
-        <h4>2. Description des Services</h4>
-        <p>
-          <strong>Beehive</strong> est une application qui permet aux étudiants
-          de créer, partager et interagir au sein d’un réseau social dédié à la
-          communauté étudiante. Les fonctionnalités incluent notamment :
-        </p>
-        <ul>
-          <li>Création de profils personnalisés ;</li>
-          <li>Publication de contenus (textes, images, vidéos) ;</li>
-          <li>
-            Interaction avec les autres utilisateurs via des commentaires et
-            likes ;
-          </li>
-          <li>Participation à des événements et groupes d'intérêt.</li>
-        </ul>
-      </section>
+          {/* Section 2 */}
+          <section>
+            <h4 style={styles.sectionTitle}>2. Description des Services</h4>
+            <p style={styles.paragraph}>
+              <span style={styles.highlight}>Beehive</span> offre une gamme de
+              fonctionnalités conçues pour améliorer l’interaction et la
+              communication entre étudiants, notamment :
+            </p>
+            <ListGroup>
+              <ListGroup.Item style={styles.listItem}>
+                Création de profils personnalisés ;
+              </ListGroup.Item>
+              <ListGroup.Item style={styles.listItem}>
+                Publication de contenus : textes, images, vidéos ;
+              </ListGroup.Item>
+              <ListGroup.Item style={styles.listItem}>
+                Systèmes d'interaction : likes, commentaires, et partages ;
+              </ListGroup.Item>
+              <ListGroup.Item style={styles.listItem}>
+                Messagerie instantanée sécurisée ;
+              </ListGroup.Item>
+              <ListGroup.Item style={styles.listItem}>
+                Appels audio et vidéo en temps réel ;
+              </ListGroup.Item>
+              <ListGroup.Item style={styles.listItem}>
+                Organisation et participation à des groupes et événements
+                thématiques.
+              </ListGroup.Item>
+            </ListGroup>
+          </section>
 
-      <section className="mt-4">
-        <h4>3. Accès aux Services</h4>
-        <h5>3.1 Inscription</h5>
-        <p>
-          Pour accéder aux Services, l’Utilisateur doit créer un compte en
-          fournissant des informations exactes et à jour. L’Utilisateur est
-          responsable de la confidentialité de ses identifiants.
-        </p>
-        <h5>3.2 Conditions d’éligibilité</h5>
-        <p>
-          Les Services sont réservés aux étudiants âgés de 16 ans ou plus.
-          L’Utilisateur s’engage à utiliser les Services uniquement à des fins
-          personnelles et non commerciales.
-        </p>
-      </section>
+          {/* Section 3 */}
+          <section>
+            <h4 style={styles.sectionTitle}>
+              3. Utilisation des Fonctionnalités
+            </h4>
+            <h5 style={styles.subSectionTitle}>
+              3.1 Publications et Interactions
+            </h5>
+            <p style={styles.paragraph}>
+              Les utilisateurs peuvent publier et partager du contenu avec leur
+              réseau. Les interactions (likes, commentaires) doivent respecter
+              les règles de conduite. Tout contenu inapproprié ou offensant peut
+              être signalé et supprimé.
+            </p>
+            <h5 style={styles.subSectionTitle}>3.2 Messagerie</h5>
+            <p style={styles.paragraph}>
+              La messagerie instantanée permet aux utilisateurs de communiquer
+              directement. Les messages doivent rester respectueux et ne pas
+              contenir de spam, d'insultes, ou de contenus illicites.
+            </p>
+            <h5 style={styles.subSectionTitle}>3.3 Appels Audio et Vidéo</h5>
+            <p style={styles.paragraph}>
+              Les appels audio et vidéo sont disponibles pour favoriser les
+              échanges en temps réel. Toute utilisation abusive (harcèlement,
+              enregistrements non autorisés) est strictement interdite et peut
+              entraîner des sanctions.
+            </p>
+          </section>
 
-      <section className="mt-4">
-        <h4>4. Engagements de l’Utilisateur</h4>
-        <p>En utilisant les Services, l’Utilisateur s’engage à :</p>
-        <ul>
-          <li>Respecter les lois et règlements en vigueur ;</li>
-          <li>
-            Ne pas publier de contenus illicites, offensants, ou contraires aux
-            bonnes mœurs ;
-          </li>
-          <li>
-            Ne pas utiliser les Services à des fins frauduleuses ou
-            malveillantes ;
-          </li>
-          <li>
-            Respecter les droits des autres utilisateurs (notamment en matière
-            de vie privée et de propriété intellectuelle).
-          </li>
-        </ul>
-      </section>
+          {/* Section 4 */}
+          <section>
+            <h4 style={styles.sectionTitle}>4. Engagements de l'Utilisateur</h4>
+            <p style={styles.paragraph}>
+              En utilisant les services de{" "}
+              <span style={styles.highlight}>Beehive</span>, les utilisateurs
+              s’engagent à :
+            </p>
+            <ListGroup>
+              <ListGroup.Item style={styles.listItem}>
+                Respecter les lois et règlements en vigueur ;
+              </ListGroup.Item>
+              <ListGroup.Item style={styles.listItem}>
+                Ne pas publier de contenus offensants, nuisibles, ou illégaux ;
+              </ListGroup.Item>
+              <ListGroup.Item style={styles.listItem}>
+                Ne pas utiliser les appels vidéo ou la messagerie à des fins de
+                harcèlement ou d'abus ;
+              </ListGroup.Item>
+              <ListGroup.Item style={styles.listItem}>
+                Respecter les droits des autres utilisateurs, notamment en
+                matière de vie privée.
+              </ListGroup.Item>
+            </ListGroup>
+          </section>
 
-      <section className="mt-4">
-        <h4>5. Données personnelles</h4>
-        <p>
-          <strong>Beehive</strong> collecte et traite les données personnelles
-          des Utilisateurs conformément à sa politique de confidentialité
-         
-          . Ces données sont nécessaires pour fournir les Services et améliorer
-          l’expérience utilisateur.
-        </p>
-      </section>
+          {/* Section 5 */}
+          <section>
+            <h4 style={styles.sectionTitle}>5. Données personnelles</h4>
+            <p style={styles.paragraph}>
+              Les données des utilisateurs (messages, appels, interactions) sont
+              collectées et stockées de manière sécurisée conformément à notre{" "}
+              <a href="/privacy-policy" style={styles.emailLink}>
+                politique de confidentialité
+              </a>
+              . Ces données sont utilisées pour offrir une expérience optimale.
+            </p>
+          </section>
 
-      <section className="mt-4">
-        <h4>6. Propriété intellectuelle</h4>
-        <p>
-          Tous les éléments de l’application (logos, contenus, design, etc.)
-          sont la propriété exclusive de <strong>Beehive</strong>. Toute
-          reproduction, modification, ou utilisation sans autorisation est
-          strictement interdite.
-        </p>
-        <p>
-          L’Utilisateur conserve les droits sur les contenus qu’il publie via
-          l’application. Cependant, en publiant, l’Utilisateur accorde à{" "}
-          <strong>Beehive</strong> une licence non exclusive pour utiliser,
-          reproduire et afficher ces contenus dans le cadre des Services.
-        </p>
-      </section>
-
-      <section className="mt-4">
-        <h4>7. Responsabilités</h4>
-        <h5>7.1 Responsabilité de Beehive</h5>
-        <p>
-          <strong>Beehive</strong> met en œuvre tous les moyens raisonnables
-          pour assurer un service de qualité, mais ne peut garantir un
-          fonctionnement ininterrompu ou exempt d’erreurs.{" "}
-          <strong>Beehive</strong> décline toute responsabilité en cas de :
-        </p>
-        <ul>
-          <li>Perte de données ;</li>
-          <li>Utilisation abusive des Services par des tiers ;</li>
-          <li>Dysfonctionnements techniques indépendants de sa volonté.</li>
-        </ul>
-        <h5>7.2 Responsabilité de l’Utilisateur</h5>
-        <p>
-          L’Utilisateur est seul responsable des contenus qu’il publie et des
-          conséquences de son utilisation des Services.
-        </p>
-      </section>
-
-      <section className="mt-4">
-        <h4>8. Modification des CGU</h4>
-        <p>
-          <strong>Beehive</strong> se réserve le droit de modifier les présentes
-          CGU à tout moment. Les modifications entreront en vigueur dès leur
-          publication sur l’application. L’Utilisateur sera informé des
-          changements et devra accepter les nouvelles conditions pour continuer
-          à utiliser les Services.
-        </p>
-      </section>
-
-      <section className="mt-4">
-        <h4>9. Résiliation</h4>
-        <p>
-          <strong>Beehive</strong> peut suspendre ou résilier le compte d’un
-          Utilisateur en cas de non-respect des CGU ou d’utilisation abusive des
-          Services. L’Utilisateur peut également supprimer son compte à tout
-          moment via les paramètres de l’application.
-        </p>
-      </section>
-
-      <section className="mt-4">
-        <h4>10. Contact</h4>
-        <p>
-          Pour toute question ou réclamation concernant les présentes CGU,
-          l’Utilisateur peut contacter <strong>Beehive</strong> à l’adresse
-          suivante : 📧{" "}
-          <a href="mailto:support@beehive.com" style={{ color: "#5e17eb" }}>
-            support@beehive.com
-          </a>
-        </p>
-      </section>
-
-      <section className="mt-4">
-        <h4>11. Loi applicable et juridiction compétente</h4>
-        <p>
-          Les présentes CGU sont régies par la loi française. En cas de litige,
-          et après échec de toute tentative de résolution amiable, les tribunaux
-          compétents seront ceux du ressort de Paris.
-        </p>
-      </section>
-    </div>
+          {/* Section 6 */}
+          <section>
+            <h4 style={styles.sectionTitle}>6. Contact et Support</h4>
+            <Card style={styles.card}>
+              <Card.Body>
+                <p style={styles.paragraph}>
+                  Pour toute assistance ou question, contactez-nous à :
+                </p>
+                <p>
+                  📧{" "}
+                  <a href="mailto:support@beehive.com" style={styles.emailLink}>
+                    support@beehive.com
+                  </a>
+                </p>
+              </Card.Body>
+            </Card>
+          </section>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
