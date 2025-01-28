@@ -85,7 +85,7 @@ const Footer = () => {
         <Row>
           <Col className="text-center">
             <p style={{ color: "#000", marginBottom: "0" }}>
-              &copy; Beehive 2024, tous droits réservés
+              &copy; Beehive 2025, tous droits réservés
             </p>
           </Col>
         </Row>
