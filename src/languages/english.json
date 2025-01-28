@@ -145,19 +145,19 @@
     },
     "contactInfo": {
       "title1": "Email",
-      "value1": "beehivecontact@gmail.com",
+      "value1": "contact.beehive@gmail.com",
       "title2": "Phone",
-      "value2": "+33 7 74 88 64 77"
+      "value2": "+33 6 24 64 11 48"
     }
   },
   "footer": {
     "email": {
       "title": "Email",
-      "value": "beehivecontact@gmail.com"
+      "value": "contact.beehive@gmail.com"
     },
     "phone": {
       "title": "Phone",
-      "value": "+33 7 74 88 64 77"
+      "value": "+33 6 24 64 11 48"
     },
     "about": {
       "title": "Need help?",

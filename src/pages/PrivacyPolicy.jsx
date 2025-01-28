@@ -169,8 +169,8 @@ const PrivacyPolicy = () => {
               </p>
               <p>
                 📧{" "}
-                <a href="mailto:support@beehive.com" style={styles.email}>
-                  support@beehive.com
+                <a href="mailto:contact.beehive@gmail.com" style={styles.email}>
+                  contact.beehive@gmail.com
                 </a>
               </p>
             </Card.Body>

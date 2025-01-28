@@ -18,7 +18,7 @@ const Pricing = () => {
           <Col>
             <h1
               style={{
-                color: "#5e17eb", 
+                color: "#5e17eb",
                 fontWeight: "700",
                 textTransform: "uppercase",
               }}
@@ -44,16 +44,16 @@ const Pricing = () => {
                     color: plan.textColor === "white" ? "white" : "#000",
                   }}
                 >
-                  <Card.Body>
+                  <Card.Body
+                    style={{ paddingTop: "1rem", paddingBottom: "1rem" }}
+                  >
                     <h3
                       className={`text-${plan.textColor} text-center mb-4`}
                       style={{ fontWeight: "bold" }}
                     >
                       {plan.title}
                     </h3>
-                    <h4
-                      className={`text-${plan.textColor} text-center mb-4`}
-                    >
+                    <h4 className={`text-${plan.textColor} text-center mb-4`}>
                       {plan.price}
                     </h4>
                     <ul className="list-unstyled">
@@ -97,16 +97,16 @@ const Pricing = () => {
                     color: plan.textColor === "white" ? "white" : "#000",
                   }}
                 >
-                  <Card.Body>
+                  <Card.Body
+                    style={{ paddingLeft: "3rem", paddingRight: "3rem" }}
+                  >
                     <h3
                       className={`text-${plan.textColor} text-center mb-4`}
                       style={{ fontWeight: "bold" }}
                     >
                       {plan.title}
                     </h3>
-                    <h4
-                      className={`text-${plan.textColor} text-center mb-4`}
-                    >
+                    <h4 className={`text-${plan.textColor} text-center mb-4`}>
                       {plan.price}
                     </h4>
                     <ul className="list-unstyled">
