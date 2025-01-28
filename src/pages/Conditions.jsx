@@ -190,8 +190,11 @@ const TermsAndConditions = () => {
                 </p>
                 <p>
                   📧{" "}
-                  <a href="mailto:support@beehive.com" style={styles.emailLink}>
-                    support@beehive.com
+                  <a
+                    href="mailto:contact.beehive@gmail.com"
+                    style={styles.emailLink}
+                  >
+                    contact.beehive@gmail.com
                   </a>
                 </p>
               </Card.Body>
