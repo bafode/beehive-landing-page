@@ -27,7 +27,7 @@ Développée avec **Next.js**, **React**, et **Material UI**, elle offre un desi
 ### 🧰 Technologies utilisées
 
 - ⚛️ React + Next.js
-- 🎨 Material UI (MUI)
+- 🎨 Material UI (MUI) +Bootstrap
 - ⚡ TypeScript
 - 📱 Responsive Design
 - 🔧 `sx` prop pour une personnalisation rapide
